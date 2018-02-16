@@ -28,6 +28,11 @@
                 <i class="fa fa-users"></i> <span class="nav-label">Réus</span>
                 <% end %>
             </li>
+            <li class="<%= 'active' if current_page?('/') %>">
+                <%= link_to processos_listaprocessos_path do %>
+                <i class="fa fa-balance-scale"></i> <span class="nav-label">Processos</span>
+                <% end %>
+            </li>
         </ul>
     </div>
 </nav>
