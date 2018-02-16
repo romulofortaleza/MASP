@@ -3479,6 +3479,7 @@ Processing by ReusController#listareus as HTML
 Completed 200 OK in 161ms (Views: 159.0ms)
 
 
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2018-02-16 15:08:24 -0300
 Processing by HomeController#index as HTML
   Rendering home/index.html.erb within layouts/application
@@ -3528,5 +3529,146 @@ Processing by ReusController#listareus as HTML
   Rendered layouts/_topnavbar.html.erb (0.3ms)
   Rendered layouts/_footer.html.erb (0.2ms)
 Completed 200 OK in 178ms (Views: 176.2ms)
+=======
+Started GET "/" for 127.0.0.1 at 2018-02-16 15:04:04 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_topnavbar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 5855ms (Views: 5683.2ms)
+
+
+Started GET "/assets/reus.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-16 15:04:10 -0300
+Started GET "/reus/listareus" for 127.0.0.1 at 2018-02-16 15:24:45 -0300
+Processing by ReusController#listareus as HTML
+  Rendering reus/listareus.html.erb within layouts/application
+  Rendered reus/listareus.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_topnavbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 139ms (Views: 137.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-16 15:24:46 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_topnavbar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 138ms (Views: 136.6ms)
+
+
+Started GET "/reus/listareus" for 127.0.0.1 at 2018-02-16 15:24:49 -0300
+Processing by ReusController#listareus as HTML
+  Rendering reus/listareus.html.erb within layouts/application
+  Rendered reus/listareus.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_topnavbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 174ms (Views: 173.1ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-02-16 15:29:22 -0300
+Processing by Rails::InfoController#routes as HTML
+  Rendering /home/tj.ce.gov.br/05598766370/.rvm/gems/ruby-2.4.1/gems/railties-5.1.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /home/tj.ce.gov.br/05598766370/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb [4 times] (3.3ms)
+  Rendered /home/tj.ce.gov.br/05598766370/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (28.4ms)
+  Rendered /home/tj.ce.gov.br/05598766370/.rvm/gems/ruby-2.4.1/gems/railties-5.1.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application (48.4ms)
+Completed 200 OK in 249ms (Views: 61.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-16 15:29:55 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_topnavbar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1235ms (Views: 1233.9ms)
+
+
+Started GET "/assets/processos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-16 15:29:56 -0300
+Started GET "/processos/listaprocessos" for 127.0.0.1 at 2018-02-16 15:30:02 -0300
+Processing by ProcessosController#listaprocessos as HTML
+  Rendering processos/listaprocessos.html.erb within layouts/application
+  Rendered processos/listaprocessos.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_topnavbar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 134ms (Views: 132.4ms)
+
+
+Started GET "/processos/listaprocessos" for 127.0.0.1 at 2018-02-16 15:30:48 -0300
+Processing by ProcessosController#listaprocessos as HTML
+  Rendering processos/listaprocessos.html.erb within layouts/application
+  Rendered processos/listaprocessos.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_topnavbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 138ms (Views: 136.6ms)
+
+
+Started GET "/processos/listaprocessos" for 127.0.0.1 at 2018-02-16 15:30:53 -0300
+Processing by ProcessosController#listaprocessos as HTML
+  Rendering processos/listaprocessos.html.erb within layouts/application
+  Rendered processos/listaprocessos.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 183ms (Views: 182.0ms)
+
+
+Started GET "/reus/listareus" for 127.0.0.1 at 2018-02-16 15:30:56 -0300
+Processing by ReusController#listareus as HTML
+  Rendering reus/listareus.html.erb within layouts/application
+  Rendered reus/listareus.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 174ms (Views: 172.5ms)
+
+
+Started GET "/processos/listaprocessos" for 127.0.0.1 at 2018-02-16 15:30:58 -0300
+Processing by ProcessosController#listaprocessos as HTML
+  Rendering processos/listaprocessos.html.erb within layouts/application
+  Rendered processos/listaprocessos.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 175ms (Views: 173.2ms)
+
+
+Started GET "/processos/listaprocessos" for 127.0.0.1 at 2018-02-16 15:32:48 -0300
+Processing by ProcessosController#listaprocessos as HTML
+  Rendering processos/listaprocessos.html.erb within layouts/application
+  Rendered processos/listaprocessos.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 138ms (Views: 136.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-16 15:33:10 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 174ms (Views: 172.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-16 15:33:15 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 174ms (Views: 173.0ms)
+>>>>>>> e215eb9ab109c45d83ddef59e20a4a8e494158a1
 
 
