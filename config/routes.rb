@@ -1,4 +1,6 @@
 Myapp::Application.routes.draw do
+  get 'processos/listaprocessos'
+
   get 'reus/listareus'
 
   get "home/index"  
