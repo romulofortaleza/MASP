@@ -6,7 +6,43 @@
                     <b>RÉUS</b>
                 </h1>
                 <br/><br/>
-            </div>
+      </div>
+      <div class = "reus_denunciados_table">
+        <table class="table datatable table-bordered dataTable no-footer" id="custodia_processos" style="background-color: white">
+                    <thead>
+                        <tr>
+                            <th>Grupo</th>
+                            <th>Órgão Jugador</th>
+                            <th>Recebimento da Denúncia</th>
+                            <th>Citação</th>
+                            <th>Defesa Preliminar</th>
+                            <th>Início da Instrução</th>
+                            <th>Fim da Instrução</th>
+                            <th>Memóriais de Acusação</th>
+                            <th>Memóriais de Defesa</th>
+                            <th>Sentença</th>
+                            <th>Trânsito</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @lista_reus.each do |row| %>
+                        <tr>
+                            <td><%= row["cprm_dsc_grupo_vara"] %></td>
+                            <td><%= row["cprm_dsc_vara"] %></td>
+                            <td><%= row["qtd_recebimento_denuncia"] %></td>
+                            <td><%= row["qtd_citacao"] %></td>
+                            <td><%= row["qtd_defesa_preliminar"] %></td>
+                            <td><%= row["qtd_inicio_instrucao"] %></td>
+                            <td><%= row["qtd_fim_instrucao"] %></td>
+                            <td><%= row["qtd_memoriais_acusacao"] %></td>
+                            <td><%= row["qtd_memoriais_defesa"] %></td>
+                            <td><%= row["qtd_sentenca"] %></td>
+                            <td><%= row["qtd_transito"] %></td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>

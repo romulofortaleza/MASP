@@ -3,16 +3,11 @@
         <ul class="nav metismenu" id="side-menu">
             <li class="nav-header">
                 <div class="dropdown profile-element">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                        <span class="clear">
-                            <span class="block m-t-xs">
-                                <strong class="font-bold">Example user</strong>
-                            </span> <span class="text-muted text-xs block">Example menu <b class="caret"></b></span>
-                        </span>
-                    </a>
-                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                        <li><a href="#">Logout</a></li>
-                    </ul>
+                  <span>
+                      <%= link_to "/home/index" do %>
+                          <img alt="image" class="img-circle" src="<%= image_url 'masp.png' %>"/>
+                      <% end %>
+                  </span>
                 </div>
                 <div class="logo-element">
                     MASP
@@ -31,6 +26,11 @@
             <li class="<%= 'active' if current_page?('/') %>">
                 <%= link_to processos_listaprocessos_path do %>
                 <i class="fa fa-balance-scale"></i> <span class="nav-label">Processos</span>
+                <% end %>
+            </li>
+            <li class="<%= 'active' if current_page?('/') %>">
+                <%= link_to processos_listaprocessos_path do %>
+                <i class="fa fa-gavel"></i> <span class="nav-label">Audiências</span>
                 <% end %>
             </li>
         </ul>
