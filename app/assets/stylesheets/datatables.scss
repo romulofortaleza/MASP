@@ -13,3 +13,14 @@
 //@import 'datatables/extensions/RowReorder/rowReorder.bootstrap';
 //@import 'datatables/extensions/Scroller/scroller.bootstrap';
 @import 'datatables/extensions/Select/select.bootstrap';
+
+.dt-print-view {
+  background-color: white !important;
+
+}
+
+// Botões do Datatables.net
+.dt-buttons.btn-group {
+  margin-bottom: 5px;
+  float: right;
+}
