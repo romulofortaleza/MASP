@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>INSPINIA</title>
+    <title>MASP</title>
 
     <!-- Main css styles -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
     <!-- Main javascript files -->
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= favicon_link_tag 'logo_tj_favicon.png' %>
     <%= csrf_meta_tags %>
 
 </head>
@@ -20,10 +20,13 @@
     <div id="wrapper">
 
         <!-- Navigation -->
+        <div style="background-color: #2F4050;height: 100%">
         <%= render 'layouts/navigation' %>
+      </div>
 
         <!-- Page wraper -->
-        <div id="page-wrapper" class="gray-bg">
+        <div id="page-wrapper" style="background: linear-gradient(#9dcbc1,#e6f2f0 40%, #FFFFFF)">
+
 
             <!-- Page wrapper -->
             <%= render 'layouts/topnavbar' %>

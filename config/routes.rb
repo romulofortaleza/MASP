@@ -1,4 +1,6 @@
 Myapp::Application.routes.draw do
+  get 'reus/listasecretarias'
+
   get 'audiencias/listaaudiencias'
 
   get 'processos/listaprocessos'

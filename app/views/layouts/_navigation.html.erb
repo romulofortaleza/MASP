@@ -13,26 +13,30 @@
                     MASP
                 </div>
             </li>
+
             <li class="<%= 'active' if current_page?('/') %>">
                 <%= link_to "/" do %>
-                <i class="fa fa-home"></i> <span class="nav-label">Início</span>
+                <i class="fa fa-home" style="font-size:18px"></i> <span class="nav-label">Início</span>
                 <% end %>
             </li>
-            <li class="<%= 'active' if current_page?('/') %>">
-                <%= link_to reus_listareus_path do %>
-                <i class="fa fa-users"></i> <span class="nav-label">Réus</span>
-                <% end %>
-            </li>
-            <li class="<%= 'active' if current_page?('/') %>">
-                <%= link_to processos_listaprocessos_path do %>
-                <i class="fa fa-balance-scale"></i> <span class="nav-label">Processos</span>
-                <% end %>
-            </li>
-            <li class="<%= 'active' if current_page?('/') %>">
-                <%= link_to processos_listaprocessos_path do %>
-                <i class="fa fa-gavel"></i> <span class="nav-label">Audiências</span>
-                <% end %>
-            </li>
-        </ul>
-    </div>
-</nav>
+
+          <li class="<%= is_active_controller('reus') %>">
+            <a href=""><i class="fa fa-users" style="font-size:18px"></i> <span class="nav-label">Processos/Réus</span> <span class="fa arrow"></span></a>
+              <ul class="nav nav-second-level collapse <%= 'active' if current_page?('/') %>">
+                <li class="<%= is_active_action('ReusGabinete') %>"><%= link_to  reus_listareus_path do %>
+                            <p>Gabinete</p>
+                        <% end %>
+                        </li>
+                        <li class="<%= is_active_action('ReusSecretaria') %>"><%= link_to  reus_listasecretarias_path do %>
+                                    <p>Secretaria</p>
+                                <% end %>
+                                </li>
+                      </ul>                  
+                  <li class="<%= 'active' if current_page?('/') %>">
+                      <%= link_to processos_listaprocessos_path do %>
+                      <i class="fa fa-gavel"></i> <span class="nav-label">Audiências</span>
+                      <% end %>
+                  </li>
+              </li>
+            </div>
+          </nav>

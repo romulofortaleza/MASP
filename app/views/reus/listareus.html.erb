@@ -8,18 +8,17 @@
                 <br/><br/>
       </div>
       <div class = "reus_denunciados_table">
-        <table class="table datatable table-bordered dataTable no-footer" id="custodia_processos" style="background-color: white">
+        <table class="table datatable table-bordered dataTable no-footer" id="tabela_gabinete" style="background-color: white">
                     <thead>
                         <tr>
-                            <th>Grupo</th>
                             <th>Órgão Jugador</th>
                             <th>Recebimento da Denúncia</th>
                             <th>Citação</th>
                             <th>Defesa Preliminar</th>
                             <th>Início da Instrução</th>
                             <th>Fim da Instrução</th>
-                            <th>Memóriais de Acusação</th>
-                            <th>Memóriais de Defesa</th>
+                            <th>Memoriais de Acusação</th>
+                            <th>Memoriais de Defesa</th>
                             <th>Sentença</th>
                             <th>Trânsito</th>
                         </tr>
@@ -27,8 +26,7 @@
                     <tbody>
                         <% @lista_reus.each do |row| %>
                         <tr>
-                            <td><%= row["cprm_dsc_grupo_vara"] %></td>
-                            <td><%= row["cprm_dsc_vara"] %></td>
+                            <td><%= row["t1.inre_dsc_vara"] %></td>
                             <td><%= row["qtd_recebimento_denuncia"] %></td>
                             <td><%= row["qtd_citacao"] %></td>
                             <td><%= row["qtd_defesa_preliminar"] %></td>
@@ -46,3 +44,78 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+
+var table = $('#tabela_gabinete').DataTable({
+          dom: "<'row'<'col-sm-12'B>>" + "<'row'<'col-sm-6'l><'col-sm-6'f>>" + "<'row'<'col-sm-12'tr>>" + "<'row'<'col-sm-5'i><'col-sm-7'p>>",
+          order: [[ 3, "asc" ]],
+          buttons: [
+              {
+                  extend: 'copyHtml5',
+                  title: "PROCESSOS DA FILA "
+              },
+              {
+                  extend: 'csv',
+                  title: "PROCESSOS DA FILA ",
+                  filename: "Processos - "
+              },
+              {
+                  extend: 'pdfHtml5',
+                  title: "PROCESSOS DA FILA ",
+                  filename: "Processos - "
+              },
+              {
+                  extend: 'print',
+                  text: 'Imprimir',
+                  className: "printChartButton",
+                  title: "PROCESSOS DA FILA ",
+                  exportOptions: {
+                      modifier: {
+                          page: 'all'
+                      }
+                  }
+              }
+          ],
+
+          columnDefs : [{"width": "10%", "targets": 0 },
+                        {"width": "10%", "targets": 1 },
+                        {"width": "10%", "targets": 2 },
+                        {"width": "10%", "targets": 3 },
+                        {"width": "10%", "targets": 4 },
+                        {"width": "10%", "targets": 5 },
+                        {"width": "10%", "targets": 6 },
+                        {"width": "10%", "targets": 7 },
+                        {"width": "10%", "targets": 8 },
+                        {"width": "10%", "targets": 9 },
+          ],
+
+          language: {
+              "sEmptyTable": "Nenhum registro encontrado",
+              "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+              "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+              "sInfoFiltered": "(Filtrados de _MAX_ registros)",
+              "sInfoPostFix": "",
+              "sInfoThousands": ".",
+              "sLengthMenu": "_MENU_ resultados por página",
+              "sLoadingRecords": "Carregando...",
+              "sProcessing": "Processando...",
+              "sZeroRecords": "Nenhum registro encontrado",
+              "sSearch": "Pesquisar",
+              "oPaginate": {
+                  "sNext": "Próximo",
+                  "sPrevious": "Anterior",
+                  "sFirst": "Primeiro",
+                  "sLast": "Último"
+              },
+              "oAria": {
+                  "sSortAscending": ": Ordenar colunas de forma ascendente",
+                  "sSortDescending": ": Ordenar colunas de forma descendente"
+              },
+              "buttons" :{
+                  "copy" : "Copiar"
+              }
+          }
+      });
+
+</script>

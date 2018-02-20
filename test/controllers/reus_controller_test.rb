@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class ReusControllerTest < ActionDispatch::IntegrationTest
-  test "should get listareus" do
-    get reus_listareus_url
+  test "should get listasecretarias" do
+    get reus_listasecretarias_url
     assert_response :success
   end
 
