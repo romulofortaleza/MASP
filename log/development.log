@@ -26493,3 +26493,1648 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 214ms (Views: 213.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-21 15:30:50 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (294.2ms)
+Completed 200 OK in 781ms (Views: 741.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-57a5f2f33d24688136dc6332b520d3b3a2ccbecbbf5034f5c20480f3e4d12d6b.css?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/datatables.self-99d41092a8f4535312355a007ff8568bd28e325a97f55174ce911ffa49eadfc5.css?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/nprogress-turbolinks5.self-1759ad2c73d6b6e93cda9150dbcd89e39df501ad601eaba5b547bc0cbf3ed213.css?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/nprogress-bootstrap.self-7efdbc7e2b02b0837cf1bf51a1a6550500b79d294e29f11c234858ab56485438.css?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/font-awesome.self-2a86d2017f4b74f22943750b3b50b9cb753581bab96cbdaaf2df53f4c04c995b.css?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/nprogress.self-184d1db22dda064c876937bb5d91fa506c3d56621c3fc8ce219c005f66fb8f2d.css?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/style.self-167d1632199aff65e3311f142e72531b5cfe228434ed733029b6037d72860cfd.css?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/animate/animate.self-570992b3ad6a262de1924aa4ecc17a6f9cf45cb8fd0daaf3cfe5a9f2f3e08e2e.css?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/jquery/jquery-3.1.1.min.self-9347a28e490a684188bc8e7748f6f086a53a87088854ac4de47095f42a085b5b.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/metisMenu/jquery.metisMenu.self-587029531d977fc7fa10623dd670189a298bd606124c23fc2edd051da5b0c914.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/datatables/jquery.dataTables.self-09a1cac04cf9882e653cf3df15b46bed5a3c238a839c9d6040e30a14144af1f5.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/pace/pace.min.self-9bf6d667514a59744d5db2c9392aaf5595dec9c131a425ababa1cb8cddb814f2.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.print.self-7aa983e0c236c36a6ed90ee582dee448015dec0ca98dbe8881e9102137fa47ca.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.flash.self-b4a6e56a9b14d6f48960cfdb4f551a0512311bdee6ff0dbb2d1a8d427efdbf14.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/slimscroll/jquery.slimscroll.min.self-a2008e2992d055fbe5108d326a54c3083f843da1a30240d2b2e1f706716fa03e.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.colVis.self-11afe91df33a12487073f276c98a16ba5d3a38b46803b98d6c38355b6fb745a7.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/datatables/extensions/Buttons/dataTables.buttons.self-90012c937b1d95a2f530de773518fb74505f64fab21cf33a9083e17612b9d7f4.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.html5.self-cd8c1c8e2a50e602e3f7b1c6461f9e580d45e9b3263d8ff6faabf7f621089cc7.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/datatables/dataTables.bootstrap.self-1daa7c39356fe20af3e5d9f9b7396892d0151ce99bd97a22e590e2423965dee0.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.bootstrap.self-dee2b8c947331c508b40e4b9a8cb92e0e6e01fbc721397172c468b221fe950ef.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/datatables/extensions/Select/dataTables.select.self-862eade47f647d6c4a51c90184450d132cbed38241e6edcc9b818b36a21a2529.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/datatables.self-f851246b3ae5838a3c37afdd22ea6e4499a54da1d61653eb710e526a440c8bdc.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/nprogress-turbolinks.self-73d7454bfd7992e3690d8d20270ede57910e91c4f710672315c01bdcf68a138d.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/audiencias.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/nprogress.self-d24f5ce72cb21aaa85a63e5ccf83aff7839951dc475bde8f4bc239c35f0d47bb.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/datatables_order_plugin.self-2faa82593c9f617a0c36f48e88d14152cabd3b0ff24f0dbf37fcf120865b43ee.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/processos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/reus.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/inspinia.self-0105b2740ac6f751553fae37cd22fd48eee7a5092c5c29e32b685e736a59e704.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/application.self-335112036c40e994d867439313c3ca2ebe9f2a21ebbe925325dc3cdbddec633c.js?body=1" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started GET "/assets/logo_tj-627db004f2ee4a2b7657bd9a0a42a5b1cfe39a0409ffa49f14bb0cd21c81a373.png" for 127.0.0.1 at 2018-02-21 15:30:51 -0300
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 15:30:55 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cIZXDMrPBcNvJG3JxloA47KsTcWqK/WZYeeu+wWpwx7Oo9UFo7xpIAZL4agw4qF1l/MjlctSi4oy7eRunV/0GA==", "user"=>{"email"=>"ramf@tjce.com", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ramf@tjce.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (28.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-21 18:30:55.888269"], ["last_sign_in_at", "2018-02-21 18:21:24.583957"], ["sign_in_count", 4], ["updated_at", "2018-02-21 18:30:55.889071"], ["id", 1]]
+  [1m[35m (93.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 529ms (ActiveRecord: 122.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 15:30:56 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (6.4ms)
+  Rendered layouts/_topnavbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 106ms (Views: 103.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reus/listareus" for 127.0.0.1 at 2018-02-21 15:30:58 -0300
+Processing by ReusController#listareus as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (64.2ms)[0m  [1m[34mselect cprm.cprm_dsc_grupo_vara, cprm.cprm_dsc_vara, cprm.cprm_dsc_tipo_processo, cprm.cprm_dsc_processo,
+       cprm.cprm_dsc_situacao_processo, cprm.cprm_nom_pessoa_reu, cprm.cprm_dsc_assunto,
+       case
+         when cprm.cprm_dat_oferecimento_denuncia is not null and cprm.cprm_dat_recebimento_denuncia is null and
+              cprm.cprm_dat_citacao is null and cprm.cprm_dat_defesa_preliminar is null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_oferecimento_denuncia,
+       case
+         when cprm.cprm_dat_recebimento_denuncia is not null and
+              cprm.cprm_dat_citacao is null and cprm.cprm_dat_defesa_preliminar is null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_recebimento_denuncia,
+       case
+         when cprm.cprm_dat_citacao is not null and cprm.cprm_dat_defesa_preliminar is null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_citacao,
+       case
+         when cprm.cprm_dat_defesa_preliminar is not null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_defesa_preliminar,
+       case
+         when cprm.cprm_dat_inicio_instrucao is not null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_inicio_instrucao,
+       case
+         when cprm.cprm_dat_fim_instrucao is not null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_fim_instrucao,
+       case
+         when cprm.cprm_dat_memoriais_acusacao is not null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_memoriais_acusacao,
+       case
+         when cprm.cprm_dat_memoriais_defesa is not null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_memoriais_defesa,
+       case
+         when cprm.cprm_dat_sentenca is not null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_sentenca,
+       case
+         when cprm.cprm_dat_transito is not null then 1
+         else 0
+       end qtd_transito
+from dwfcb.tcprm_ciclo_processo_reu_masp cprm
+where cprm.cprm_num_ciclo = 1
+  and cprm.cprm_cod_vara <> 36 --12ª Vara Criminal
+  and cprm.cprm_dat_inicio_execucao is null
+  and (cprm.cprm_dat_oferecimento_denuncia is not null
+    or cprm.cprm_dat_recebimento_denuncia is not null)
+order by cprm.cprm_dsc_grupo_vara, cprm.cprm_dsc_vara, cprm.cprm_nom_pessoa_reu[0m
+  Rendering reus/listareus.html.erb within layouts/application
+  Rendered reus/listareus.html.erb within layouts/application (20.1ms)
+  Rendered layouts/_navigation.html.erb (7.0ms)
+  Rendered layouts/_topnavbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 464ms (Views: 262.9ms | ActiveRecord: 64.4ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUsernameToUsers (20180221190918)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (34.0ms)[0m  [1m[35mALTER TABLE "users" ADD "username" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_users_on_username" ON "users" ("username")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180221190918"]]
+  [1m[35m (93.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_username' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_username' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (167.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "username" varchar)[0m
+  [1m[35m (73.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (99.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (239.3ms)[0m  [1m[35mCREATE  INDEX "index_users_on_username" ON "users" ("username")[0m
+  [1m[35m (98.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (109.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180221190918)[0m
+  [1m[35m (98.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180221141125);
+
+[0m
+  [1m[35m (99.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-02-21 19:11:42.860601"], ["updated_at", "2018-02-21 19:11:42.860601"]]
+  [1m[35m (100.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (102.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "username" varchar)[0m
+  [1m[35m (73.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (72.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (73.8ms)[0m  [1m[35mCREATE  INDEX "index_users_on_username" ON "users" ("username")[0m
+  [1m[35m (156.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (140.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180221190918)[0m
+  [1m[35m (73.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180221141125);
+
+[0m
+  [1m[35m (107.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-02-21 19:11:43.773875"], ["updated_at", "2018-02-21 19:11:43.773875"]]
+  [1m[35m (69.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ramf@tjce.com"], ["LIMIT", 1]]
+  [1m[35mSQL (11.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "username") VALUES (?, ?, ?, ?)[0m  [["email", "ramf@tjce.com"], ["created_at", "2018-02-21 19:11:43.896527"], ["updated_at", "2018-02-21 19:11:43.896527"], ["username", "900828"]]
+  [1m[35m (119.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-02-21 16:20:23 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 38ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-21 16:20:24 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (131.7ms)
+Completed 200 OK in 2483ms (Views: 2411.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 16:20:33 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jKkIfZM5vbFmSLS6krrm/1NaC86ph+AethW0L/lKOEsS8vYQg6uSzGYGx2YEZnXZJ8KVMa/QpaxwFf/J98XaUw==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900828"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+
+  
+Psych::SyntaxError ((<unknown>): could not find expected ':' while scanning a simple key at line 15 column 1):
+  
+/home/tj.ce.gov.br/900828/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/psych.rb:377:in `parse'
+/home/tj.ce.gov.br/900828/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/psych.rb:377:in `parse_stream'
+/home/tj.ce.gov.br/900828/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/psych.rb:325:in `parse'
+/home/tj.ce.gov.br/900828/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/psych.rb:252:in `load'
+devise_ldap_authenticatable (0.8.5) lib/devise_ldap_authenticatable/ldap/connection.rb:10:in `initialize'
+devise_ldap_authenticatable (0.8.5) lib/devise_ldap_authenticatable/ldap/adapter.rb:14:in `new'
+devise_ldap_authenticatable (0.8.5) lib/devise_ldap_authenticatable/ldap/adapter.rb:14:in `valid_credentials?'
+devise_ldap_authenticatable (0.8.5) lib/devise_ldap_authenticatable/model.rb:48:in `valid_ldap_authentication?'
+devise_ldap_authenticatable (0.8.5) lib/devise_ldap_authenticatable/strategy.rb:18:in `block in authenticate!'
+devise (4.3.0) lib/devise/models/authenticatable.rb:81:in `valid_for_authentication?'
+devise (4.3.0) lib/devise/strategies/authenticatable.rb:36:in `validate'
+devise_ldap_authenticatable (0.8.5) lib/devise_ldap_authenticatable/strategy.rb:18:in `authenticate!'
+warden (1.2.7) lib/warden/strategies/base.rb:54:in `_run!'
+warden (1.2.7) lib/warden/proxy.rb:359:in `block in _run_strategies_for'
+warden (1.2.7) lib/warden/proxy.rb:354:in `each'
+warden (1.2.7) lib/warden/proxy.rb:354:in `_run_strategies_for'
+warden (1.2.7) lib/warden/proxy.rb:324:in `_perform_authentication'
+warden (1.2.7) lib/warden/proxy.rb:128:in `authenticate!'
+devise (4.3.0) app/controllers/devise/sessions_controller.rb:17:in `create'
+actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.1.3) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+rack (2.0.4) lib/rack/handler/webrick.rb:86:in `service'
+/home/tj.ce.gov.br/900828/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/tj.ce.gov.br/900828/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/tj.ce.gov.br/900828/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-02-21 16:29:38 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-21 16:29:39 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (129.6ms)
+Completed 200 OK in 1041ms (Views: 1011.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 16:29:51 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"939WAvUtt2/cB9dvbFbhebsDtgH/QiBV7OJAZER/N1FpJKhv5b+YEtxJpLP6inJfz5so/vkVZecq4guCSvDVSQ==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900828"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 0.2ms)
+
+
+  
+Psych::SyntaxError ((<unknown>): could not find expected ':' while scanning a simple key at line 15 column 1):
+  
+/home/tj.ce.gov.br/900828/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/psych.rb:377:in `parse'
+/home/tj.ce.gov.br/900828/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/psych.rb:377:in `parse_stream'
+/home/tj.ce.gov.br/900828/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/psych.rb:325:in `parse'
+/home/tj.ce.gov.br/900828/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/psych.rb:252:in `load'
+devise_ldap_authenticatable (0.8.5) lib/devise_ldap_authenticatable/ldap/connection.rb:10:in `initialize'
+devise_ldap_authenticatable (0.8.5) lib/devise_ldap_authenticatable/ldap/adapter.rb:14:in `new'
+devise_ldap_authenticatable (0.8.5) lib/devise_ldap_authenticatable/ldap/adapter.rb:14:in `valid_credentials?'
+devise_ldap_authenticatable (0.8.5) lib/devise_ldap_authenticatable/model.rb:48:in `valid_ldap_authentication?'
+devise_ldap_authenticatable (0.8.5) lib/devise_ldap_authenticatable/strategy.rb:18:in `block in authenticate!'
+devise (4.3.0) lib/devise/models/authenticatable.rb:81:in `valid_for_authentication?'
+devise (4.3.0) lib/devise/strategies/authenticatable.rb:36:in `validate'
+devise_ldap_authenticatable (0.8.5) lib/devise_ldap_authenticatable/strategy.rb:18:in `authenticate!'
+warden (1.2.7) lib/warden/strategies/base.rb:54:in `_run!'
+warden (1.2.7) lib/warden/proxy.rb:359:in `block in _run_strategies_for'
+warden (1.2.7) lib/warden/proxy.rb:354:in `each'
+warden (1.2.7) lib/warden/proxy.rb:354:in `_run_strategies_for'
+warden (1.2.7) lib/warden/proxy.rb:324:in `_perform_authentication'
+warden (1.2.7) lib/warden/proxy.rb:128:in `authenticate!'
+devise (4.3.0) app/controllers/devise/sessions_controller.rb:17:in `create'
+actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.1.3) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+rack (2.0.4) lib/rack/handler/webrick.rb:86:in `service'
+/home/tj.ce.gov.br/900828/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/tj.ce.gov.br/900828/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/tj.ce.gov.br/900828/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Started GET "/" for 127.0.0.1 at 2018-02-21 16:40:03 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-21 16:40:04 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (146.2ms)
+Completed 200 OK in 1003ms (Views: 989.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 16:40:14 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XCdZMaJK9m6PPgHAa9VT85+vRX/DxLY6MJjIgnKd8HQ3EdTG6RSf8DNYmrIVsb6k2YTqgOv/mSqzpcIRfsbfug==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900828"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Romulo Augusto de melo Fortaleza,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (33.7ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-21 19:40:14.325265"], ["last_sign_in_at", "2018-02-21 19:40:14.325265"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2018-02-21 19:40:14.326109"], ["id", 1]]
+  [1m[35m (99.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 446ms (ActiveRecord: 133.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 16:40:14 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (6.0ms)
+  Rendered layouts/_topnavbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 303ms (Views: 257.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-02-21 16:40:21 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 58ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 16:40:21 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-21 16:40:21 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.6ms)
+Completed 200 OK in 220ms (Views: 219.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-21 16:46:38 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (431.4ms)
+Completed 200 OK in 1292ms (Views: 1219.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/logo_tj_favicon-691eca4ca99d9aaedf2c45fbb9bbb7c5713a66b19a05e37e49e62cc929810d70.png" for 127.0.0.1 at 2018-02-21 16:46:44 -0300
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-21 16:47:33 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (4.0ms)
+Completed 200 OK in 140ms (Views: 138.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo_tj_favicon-691eca4ca99d9aaedf2c45fbb9bbb7c5713a66b19a05e37e49e62cc929810d70.png" for 127.0.0.1 at 2018-02-21 16:47:33 -0300
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-21 16:48:05 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (3.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (6.4ms)
+Completed 200 OK in 102ms (Views: 100.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo_tj_favicon-691eca4ca99d9aaedf2c45fbb9bbb7c5713a66b19a05e37e49e62cc929810d70.png" for 127.0.0.1 at 2018-02-21 16:48:06 -0300
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-21 16:48:13 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (8.2ms)
+Completed 200 OK in 116ms (Views: 115.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo_tj_favicon-691eca4ca99d9aaedf2c45fbb9bbb7c5713a66b19a05e37e49e62cc929810d70.png" for 127.0.0.1 at 2018-02-21 16:48:13 -0300
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-21 16:48:35 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (4.0ms)
+Completed 200 OK in 93ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo_tj_favicon-691eca4ca99d9aaedf2c45fbb9bbb7c5713a66b19a05e37e49e62cc929810d70.png" for 127.0.0.1 at 2018-02-21 16:48:35 -0300
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 16:48:51 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ia934C0RCK5Et65zNv2e3iwOqn2yR1oJQZ4j0Vie1v3PWHqNP3CcgDqtjJW6+iZ83JydihMlbdr6R+xEnOn1ZQ==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900828"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Romulo Augusto de melo Fortaleza,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (39.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-21 19:48:52.186512"], ["sign_in_count", 2], ["updated_at", "2018-02-21 19:48:52.187509"], ["id", 1]]
+  [1m[35m (130.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 442ms (ActiveRecord: 170.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 16:48:52 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (16.5ms)
+Completed 200 OK in 249ms (Views: 224.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 16:49:15 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 110ms (Views: 107.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/logo_tj_favicon-691eca4ca99d9aaedf2c45fbb9bbb7c5713a66b19a05e37e49e62cc929810d70.png" for 127.0.0.1 at 2018-02-21 16:49:15 -0300
+Started GET "/" for 127.0.0.1 at 2018-02-21 16:49:27 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (7.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 153ms (Views: 150.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/logo_tj_favicon-691eca4ca99d9aaedf2c45fbb9bbb7c5713a66b19a05e37e49e62cc929810d70.png" for 127.0.0.1 at 2018-02-21 16:49:27 -0300
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-02-21 16:58:32 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 176ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 16:58:34 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-21 16:58:34 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (44.6ms)
+Completed 200 OK in 551ms (Views: 550.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 16:58:47 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W8MdBkEiyWncTMsq6GRTLTTbxJzoErQGYH/GUfXNgxTXDkSoSF5tQhv0MyvTW+R1ckzZmBvtrb6Ml1TV6SPqZA==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900828"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Romulo Augusto de melo Fortaleza,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-21 19:58:47.633714"], ["last_sign_in_at", "2018-02-21 19:48:52.186512"], ["sign_in_count", 3], ["updated_at", "2018-02-21 19:58:47.634425"], ["id", 1]]
+  [1m[35m (154.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 616ms (ActiveRecord: 155.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 16:58:47 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_navigation.html.erb (17.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (17.2ms)
+Completed 200 OK in 421ms (Views: 358.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-02-21 16:58:57 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 16:58:57 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-21 16:58:57 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.8ms)
+Completed 200 OK in 265ms (Views: 263.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 16:59:09 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F8L5Be9vIXy3JQ27omuh/xouD+5Fk3g8Ek3ABrG+WBgn5cR4IVSQZP3mUGmy3j6o+yutgH9CUlq00jTQcFekhg==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "05598766370"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=João Alfredo Pinto Moreira,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+Completed 401 Unauthorized in 21ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F8L5Be9vIXy3JQ27omuh/xouD+5Fk3g8Ek3ABrG+WBgn5cR4IVSQZP3mUGmy3j6o+yutgH9CUlq00jTQcFekhg==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (4.2ms)
+Completed 200 OK in 331ms (Views: 329.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 16:59:46 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a7zkT1gCvlyeL18aPINJz5qViP7bo1OSh/3KwXrk6jFbm9kyljkPRNTsAsgsNtaYe5AqkOFyefQhYj4Xuw0Wrw==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "05598766370"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=João Alfredo Pinto Moreira,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+Completed 401 Unauthorized in 24ms (ActiveRecord: 0.8ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a7zkT1gCvlyeL18aPINJz5qViP7bo1OSh/3KwXrk6jFbm9kyljkPRNTsAsgsNtaYe5AqkOFyefQhYj4Xuw0Wrw==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.3ms)
+Completed 200 OK in 83ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:00:00 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4AvpJWM3vgYxa4U6AJjTOnD29m5oEXdV4CbF7Jom783QLNRYrQwPHnuo2OgQLUxtkfNUAFLAXTNGuTE6W88TUw==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "05598766370"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=João Alfredo Pinto Moreira,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+Completed 401 Unauthorized in 18ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4AvpJWM3vgYxa4U6AJjTOnD29m5oEXdV4CbF7Jom783QLNRYrQwPHnuo2OgQLUxtkfNUAFLAXTNGuTE6W88TUw==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.9ms)
+Completed 200 OK in 265ms (Views: 264.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:01:25 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4AvpJWM3vgYxa4U6AJjTOnD29m5oEXdV4CbF7Jom783QLNRYrQwPHnuo2OgQLUxtkfNUAFLAXTNGuTE6W88TUw==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "05598766370"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=João Alfredo Pinto Moreira,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+Completed 401 Unauthorized in 44ms (ActiveRecord: 1.1ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4AvpJWM3vgYxa4U6AJjTOnD29m5oEXdV4CbF7Jom783QLNRYrQwPHnuo2OgQLUxtkfNUAFLAXTNGuTE6W88TUw==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (4.1ms)
+Completed 200 OK in 82ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo_tj_favicon-691eca4ca99d9aaedf2c45fbb9bbb7c5713a66b19a05e37e49e62cc929810d70.png" for 127.0.0.1 at 2018-02-21 17:01:25 -0300
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:01:30 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d9455QMtop/tmu65nd7KySzIj4dK7PbSEdwflsvvYDVH+QSYzRYTh6dZs2uNa1Wezc0t6XA93LS3Q+tACgacqw==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "05598766370"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=João Alfredo Pinto Moreira,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+Completed 401 Unauthorized in 28ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d9455QMtop/tmu65nd7KySzIj4dK7PbSEdwflsvvYDVH+QSYzRYTh6dZs2uNa1Wezc0t6XA93LS3Q+tACgacqw==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.4ms)
+Completed 200 OK in 258ms (Views: 257.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:02:15 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d9455QMtop/tmu65nd7KySzIj4dK7PbSEdwflsvvYDVH+QSYzRYTh6dZs2uNa1Wezc0t6XA93LS3Q+tACgacqw==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "05598766370"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=João Alfredo Pinto Moreira,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+Completed 401 Unauthorized in 208ms (ActiveRecord: 0.9ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d9455QMtop/tmu65nd7KySzIj4dK7PbSEdwflsvvYDVH+QSYzRYTh6dZs2uNa1Wezc0t6XA93LS3Q+tACgacqw==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (49.8ms)
+Completed 200 OK in 639ms (Views: 638.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo_tj_favicon-691eca4ca99d9aaedf2c45fbb9bbb7c5713a66b19a05e37e49e62cc929810d70.png" for 127.0.0.1 at 2018-02-21 17:02:17 -0300
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:02:23 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mtB4ezM27gjtoTCFUi7CfbXaXTpFRUJLKTJZ8D05KOyq90UG/Q1fEKdibVdCm10qVN//VH+UaC2Pra0m/NDUcg==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "05598766370"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=João Alfredo Pinto Moreira,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+Completed 401 Unauthorized in 21ms (ActiveRecord: 0.3ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mtB4ezM27gjtoTCFUi7CfbXaXTpFRUJLKTJZ8D05KOyq90UG/Q1fEKdibVdCm10qVN//VH+UaC2Pra0m/NDUcg==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.5ms)
+Completed 200 OK in 282ms (Views: 281.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:02:41 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+0JgD1bam3XMELQ76LDpdgmp5JH/o2gD4bkJafBE+k7LZV1ymOEqbYbT6en4BXYh6KxG/8VyQmVHJv2/Ma0G0A==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900828"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Romulo Augusto de melo Fortaleza,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-21 20:02:41.581389"], ["last_sign_in_at", "2018-02-21 19:58:47.633714"], ["sign_in_count", 4], ["updated_at", "2018-02-21 20:02:41.582331"], ["id", 1]]
+  [1m[35m (110.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 238ms (ActiveRecord: 111.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 17:02:41 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (6.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 241ms (Views: 214.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-02-21 17:03:10 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 17:03:10 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:03:10 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.8ms)
+Completed 200 OK in 96ms (Views: 95.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 17:07:16 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:07:16 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (56.2ms)
+Completed 200 OK in 499ms (Views: 467.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:07:31 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jp59V6ukQDSVNoUMEBLQQRzXh1pqW8K1+9qanjEO0xw9I9y+dHdq2n5Jj1/ButiDTdvncWlUOJSe4SMglercBQ==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "05598766370"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=João Alfredo Pinto Moreira,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+Completed 401 Unauthorized in 166ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jp59V6ukQDSVNoUMEBLQQRzXh1pqW8K1+9qanjEO0xw9I9y+dHdq2n5Jj1/ButiDTdvncWlUOJSe4SMglercBQ==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.5ms)
+Completed 200 OK in 253ms (Views: 251.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:08:01 -0300
+  
+SyntaxError (/home/tj.ce.gov.br/900828/Documentos/projetos/MASP/app/models/user.rb:21: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/user.rb:21: syntax error, unexpected end-of-input, expecting keyword_end
+config/routes.rb:2:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:08:08 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jp59V6ukQDSVNoUMEBLQQRzXh1pqW8K1+9qanjEO0xw9I9y+dHdq2n5Jj1/ButiDTdvncWlUOJSe4SMglercBQ==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "05598766370"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=João Alfredo Pinto Moreira,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+Completed 401 Unauthorized in 63ms (ActiveRecord: 1.7ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jp59V6ukQDSVNoUMEBLQQRzXh1pqW8K1+9qanjEO0xw9I9y+dHdq2n5Jj1/ButiDTdvncWlUOJSe4SMglercBQ==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (4.3ms)
+Completed 200 OK in 118ms (Views: 116.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo_tj_favicon-691eca4ca99d9aaedf2c45fbb9bbb7c5713a66b19a05e37e49e62cc929810d70.png" for 127.0.0.1 at 2018-02-21 17:08:08 -0300
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:08:17 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jp59V6ukQDSVNoUMEBLQQRzXh1pqW8K1+9qanjEO0xw9I9y+dHdq2n5Jj1/ButiDTdvncWlUOJSe4SMglercBQ==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "05598766370"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=João Alfredo Pinto Moreira,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+Completed 401 Unauthorized in 72ms (ActiveRecord: 0.9ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jp59V6ukQDSVNoUMEBLQQRzXh1pqW8K1+9qanjEO0xw9I9y+dHdq2n5Jj1/ButiDTdvncWlUOJSe4SMglercBQ==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (13.0ms)
+Completed 200 OK in 557ms (Views: 556.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo_tj_favicon-691eca4ca99d9aaedf2c45fbb9bbb7c5713a66b19a05e37e49e62cc929810d70.png" for 127.0.0.1 at 2018-02-21 17:08:18 -0300
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:08:29 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yk/bYLcHZ+lbjqFwhuYdwxqtaJ6JwzCiJX3MQ2sP60h58nqJaNRNB7DxqyNXThUBS6EItYrMyoNARnX9z+vkUQ==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "05598766370"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=João Alfredo Pinto Moreira,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+Completed 401 Unauthorized in 22ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yk/bYLcHZ+lbjqFwhuYdwxqtaJ6JwzCiJX3MQ2sP60h58nqJaNRNB7DxqyNXThUBS6EItYrMyoNARnX9z+vkUQ==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.7ms)
+Completed 200 OK in 238ms (Views: 236.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:18:57 -0300
+  
+NameError (uninitialized constant UserDB):
+  
+app/models/user.rb:1:in `<top (required)>'
+config/routes.rb:2:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:19:07 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yk/bYLcHZ+lbjqFwhuYdwxqtaJ6JwzCiJX3MQ2sP60h58nqJaNRNB7DxqyNXThUBS6EItYrMyoNARnX9z+vkUQ==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "05598766370"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=João Alfredo Pinto Moreira,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+Completed 401 Unauthorized in 191ms (ActiveRecord: 1.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yk/bYLcHZ+lbjqFwhuYdwxqtaJ6JwzCiJX3MQ2sP60h58nqJaNRNB7DxqyNXThUBS6EItYrMyoNARnX9z+vkUQ==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (11.0ms)
+Completed 200 OK in 855ms (Views: 854.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo_tj_favicon-691eca4ca99d9aaedf2c45fbb9bbb7c5713a66b19a05e37e49e62cc929810d70.png" for 127.0.0.1 at 2018-02-21 17:19:09 -0300
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:23:39 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pxf62R1GUpYPrimVNpvZNIeNkKYGMGztI5Zi0dF4s3+MqlswwpV4eOTRI8bnM9H21oHwjQU/lsxGrdtvdZy8Zg==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "05598766370"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=João Alfredo Pinto Moreira,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+Completed 401 Unauthorized in 26ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pxf62R1GUpYPrimVNpvZNIeNkKYGMGztI5Zi0dF4s3+MqlswwpV4eOTRI8bnM9H21oHwjQU/lsxGrdtvdZy8Zg==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.9ms)
+Completed 200 OK in 120ms (Views: 119.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:24:16 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AhevCNbO5AO4d2dQqTiEXEVuV5wu7KUZ06/zpBaZZsqxqg7hCR3O7VMIbQN4kIyeFGI3ty3jXzi2lEoasn1p0w==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900828"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Romulo Augusto de melo Fortaleza,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (63.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-21 20:24:16.952853"], ["last_sign_in_at", "2018-02-21 20:02:41.581389"], ["sign_in_count", 5], ["updated_at", "2018-02-21 20:24:16.953765"], ["id", 1]]
+  [1m[35m (155.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 523ms (ActiveRecord: 219.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 17:24:17 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (3.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (17.2ms)
+Completed 200 OK in 311ms (Views: 265.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-02-21 17:24:20 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 316ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 17:24:20 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:24:20 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (4.0ms)
+Completed 200 OK in 231ms (Views: 230.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:24:39 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4pOhINg6v0vJlJk9ZOuFXdriv0Zq/jeiSn1RNThd2jAVDBbXEcMctPkKCSfrY5yDpSDVly+i9kLX4jVy1LFQcw==", "user"=>{"username"=>"04321613337", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "04321613337"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=04321613337
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=04321613337
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Filipe Estanieski Botti,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+Completed 401 Unauthorized in 25ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4pOhINg6v0vJlJk9ZOuFXdriv0Zq/jeiSn1RNThd2jAVDBbXEcMctPkKCSfrY5yDpSDVly+i9kLX4jVy1LFQcw==", "user"=>{"username"=>"04321613337", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (8.5ms)
+Completed 200 OK in 234ms (Views: 233.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:26:43 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"doXTQHoSC4VmXRm6o4HtHw63usXXzPh3pMsdL0PBZCKBGmS3s+uoelbDiaAsCfTBcXXQFJKQOZc5VHlory3uYQ==", "user"=>{"username"=>"924", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "924"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=924
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=924
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Esio Lima Verde Neto,OU=Usuarios,OU=FORUM,DC=tj,DC=ce,DC=gov,DC=br
+  [36mLDAP:[0m Not authorized because not authenticated.
+Completed 401 Unauthorized in 62ms (ActiveRecord: 0.3ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"doXTQHoSC4VmXRm6o4HtHw63usXXzPh3pMsdL0PBZCKBGmS3s+uoelbDiaAsCfTBcXXQFJKQOZc5VHlory3uYQ==", "user"=>{"username"=>"924", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.0ms)
+Completed 200 OK in 90ms (Views: 89.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:26:49 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e0JrTLHEFJZKRMKMbh1wDxR7TC/gWU4DZywYfqjJftGM3dy7eD23aXraUpbhlWnRa7km/qUFj+P6s3w5RCX0kg==", "user"=>{"username"=>"924", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "924"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=924
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=924
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Esio Lima Verde Neto,OU=Usuarios,OU=FORUM,DC=tj,DC=ce,DC=gov,DC=br
+Completed 401 Unauthorized in 31ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e0JrTLHEFJZKRMKMbh1wDxR7TC/gWU4DZywYfqjJftGM3dy7eD23aXraUpbhlWnRa7km/qUFj+P6s3w5RCX0kg==", "user"=>{"username"=>"924", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.9ms)
+Completed 200 OK in 228ms (Views: 226.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:27:01 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ShW8EyoljloHN060oo2s8YRe//VHUWgvS7AVCI5EaE69igvk49wtpTep3q4tBbUv+5yVJAINqc/WL3FPYqjiDQ==", "user"=>{"username"=>"924", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "924"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=924
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=924
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Esio Lima Verde Neto,OU=Usuarios,OU=FORUM,DC=tj,DC=ce,DC=gov,DC=br
+Completed 401 Unauthorized in 30ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ShW8EyoljloHN060oo2s8YRe//VHUWgvS7AVCI5EaE69igvk49wtpTep3q4tBbUv+5yVJAINqc/WL3FPYqjiDQ==", "user"=>{"username"=>"924", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.3ms)
+Completed 200 OK in 210ms (Views: 209.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:28:01 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"73XC6LyRo5wxCWQvZuIeIfcjJqs6t9NToMPzysB4dfUY6nUfdWgAYwGX9DXpagf/iOFMen/rErM9XJeNLJT/tg==", "user"=>{"username"=>"924", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "924"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=924
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=924
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Esio Lima Verde Neto,OU=Usuarios,OU=FORUM,DC=tj,DC=ce,DC=gov,DC=br
+Completed 401 Unauthorized in 27ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"73XC6LyRo5wxCWQvZuIeIfcjJqs6t9NToMPzysB4dfUY6nUfdWgAYwGX9DXpagf/iOFMen/rErM9XJeNLJT/tg==", "user"=>{"username"=>"924", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.1ms)
+Completed 200 OK in 95ms (Views: 94.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:28:28 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"73XC6LyRo5wxCWQvZuIeIfcjJqs6t9NToMPzysB4dfUY6nUfdWgAYwGX9DXpagf/iOFMen/rErM9XJeNLJT/tg==", "user"=>{"username"=>"924", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "924"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=924
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=924
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Esio Lima Verde Neto,OU=Usuarios,OU=FORUM,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=924
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param mail has value ["esio.neto@tjce.jus.br"]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=924
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param mail has value ["esio.neto@tjce.jus.br"]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=924
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param mail has value ["esio.neto@tjce.jus.br"]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "esio.neto@tjce.jus.br"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "924"], ["LIMIT", 1]]
+  [1m[35mSQL (15.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "username") VALUES (?, ?, ?, ?)[0m  [["email", "esio.neto@tjce.jus.br"], ["created_at", "2018-02-21 20:28:29.115128"], ["updated_at", "2018-02-21 20:28:29.115128"], ["username", "924"]]
+  [1m[35m (96.7ms)[0m  [1m[36mcommit transaction[0m
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=924
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=924
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Esio Lima Verde Neto,OU=Usuarios,OU=FORUM,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-02-21 20:28:29.253707"], ["last_sign_in_at", "2018-02-21 20:28:29.253707"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-02-21 20:28:29.254344"], ["id", 2]]
+  [1m[35m (114.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 748ms (ActiveRecord: 228.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 17:28:29 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=924
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Esio Lima Verde Neto"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation.html.erb (8.1ms)
+  Rendered layouts/_topnavbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 874ms (Views: 831.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-02-21 17:28:33 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 59ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 17:28:33 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:28:33 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (39.8ms)
+Completed 200 OK in 280ms (Views: 278.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:28:44 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yNgLC1wmN7bY2x+5mUtdGtJVmvP72WyUonffnxDqe18vLmWWQGVB3Bc4rYAYJn8WyrsoGBySSVUBfaEn9uvHng==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "05598766370"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=João Alfredo Pinto Moreira,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param mail does not exist
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param mail does not exist
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "05598766370@tjce.jus.br"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "05598766370"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "username") VALUES (?, ?, ?, ?)[0m  [["email", "05598766370@tjce.jus.br"], ["created_at", "2018-02-21 20:28:44.444038"], ["updated_at", "2018-02-21 20:28:44.444038"], ["username", "05598766370"]]
+  [1m[35m (135.4ms)[0m  [1m[36mcommit transaction[0m
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=João Alfredo Pinto Moreira,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-02-21 20:28:44.603497"], ["last_sign_in_at", "2018-02-21 20:28:44.603497"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-02-21 20:28:44.604101"], ["id", 3]]
+  [1m[35m (76.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 299ms (ActiveRecord: 214.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 17:28:44 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Jo\xC3\xA3o Alfredo Pinto Moreira"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 269ms (Views: 252.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-02-21 17:30:08 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 17:30:08 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:30:08 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.2ms)
+Completed 200 OK in 135ms (Views: 134.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:30:16 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OuiT3e61pYW8AYO7dPlb/ItZSnvwphUom6O+/KfLph/fQfEfJ5p+XK53dHAvvllG92SydH9FbSOMyInQtJh5QQ==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900828"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Romulo Augusto de melo Fortaleza,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [36mLDAP:[0m Not authorized because not authenticated.
+Completed 401 Unauthorized in 38ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OuiT3e61pYW8AYO7dPlb/ItZSnvwphUom6O+/KfLph/fQfEfJ5p+XK53dHAvvllG92SydH9FbSOMyInQtJh5QQ==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.5ms)
+Completed 200 OK in 222ms (Views: 221.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:30:22 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8badSV6zSkPLAC8r5weRceZjshuePv8gn14STOV/Q6gUH/+Ll5yRmtl22OC8QJPLml5KFBHdhyuINSVg9iyc9g==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900828"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Romulo Augusto de melo Fortaleza,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-21 20:30:22.202709"], ["last_sign_in_at", "2018-02-21 20:24:16.952853"], ["sign_in_count", 6], ["updated_at", "2018-02-21 20:30:22.203474"], ["id", 1]]
+  [1m[35m (187.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 222ms (ActiveRecord: 188.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 17:30:22 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_topnavbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 250ms (Views: 230.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 17:30:52 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (15.4ms)
+  Rendered layouts/_topnavbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 588ms (Views: 442.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-02-21 17:30:57 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 143ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 17:30:57 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:30:57 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (10.6ms)
+Completed 200 OK in 258ms (Views: 256.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:31:03 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pGSfY/r9pwYHRU2lBIivhWfEFBLeCyvTj58DZ3wmRkSaMsSgGxrteim8VSlQ+KNDkfiatyjnHJ8W3IFZDIzm2g==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900828"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Romulo Augusto de melo Fortaleza,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [36mLDAP:[0m Not authorized because not authenticated.
+Completed 401 Unauthorized in 30ms (ActiveRecord: 0.3ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pGSfY/r9pwYHRU2lBIivhWfEFBLeCyvTj58DZ3wmRkSaMsSgGxrteim8VSlQ+KNDkfiatyjnHJ8W3IFZDIzm2g==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.1ms)
+Completed 200 OK in 221ms (Views: 220.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:31:29 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pGSfY/r9pwYHRU2lBIivhWfEFBLeCyvTj58DZ3wmRkSaMsSgGxrteim8VSlQ+KNDkfiatyjnHJ8W3IFZDIzm2g==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pGSfY/r9pwYHRU2lBIivhWfEFBLeCyvTj58DZ3wmRkSaMsSgGxrteim8VSlQ+KNDkfiatyjnHJ8W3IFZDIzm2g==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (11.7ms)
+Completed 200 OK in 422ms (Views: 409.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/logo_tj_favicon-691eca4ca99d9aaedf2c45fbb9bbb7c5713a66b19a05e37e49e62cc929810d70.png" for 127.0.0.1 at 2018-02-21 17:31:30 -0300
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:31:32 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EFdCuNtoLTFNrKPCghZqw464l4uB0fYAj0YXrCOzhpcuARl7Oo9nTWNVu07WZmYFeIQZLnc9wUwWBZWSUxkmCQ==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EFdCuNtoLTFNrKPCghZqw464l4uB0fYAj0YXrCOzhpcuARl7Oo9nTWNVu07WZmYFeIQZLnc9wUwWBZWSUxkmCQ==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.8ms)
+Completed 200 OK in 271ms (Views: 269.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:31:36 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pdf+2hb/VD/AbfP2+ZEdGlrbqmysz9jTxVdo4sFovSwDgaUZ9xgeQ+6U63qt4RHcrOckyVoj759cFOrcscIdsg==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pdf+2hb/VD/AbfP2+ZEdGlrbqmysz9jTxVdo4sFovSwDgaUZ9xgeQ+6U63qt4RHcrOckyVoj759cFOrcscIdsg==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (4.0ms)
+Completed 200 OK in 226ms (Views: 225.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:31:44 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cHjAIbP6AdhKNJdsxM1Q8bxAz5GUc/S1boE2Bk/YirBOLpviUh1LpGTNj+CQvVw3SnxBNGKfw/n3wrQ4P3IqLg==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cHjAIbP6AdhKNJdsxM1Q8bxAz5GUc/S1boE2Bk/YirBOLpviUh1LpGTNj+CQvVw3SnxBNGKfw/n3wrQ4P3IqLg==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (4.0ms)
+Completed 200 OK in 207ms (Views: 206.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:32:20 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cHjAIbP6AdhKNJdsxM1Q8bxAz5GUc/S1boE2Bk/YirBOLpviUh1LpGTNj+CQvVw3SnxBNGKfw/n3wrQ4P3IqLg==", "user"=>{"username"=>"05598766370", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "05598766370"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=João Alfredo Pinto Moreira,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-21 20:32:20.704423"], ["sign_in_count", 2], ["updated_at", "2018-02-21 20:32:20.705479"], ["id", 3]]
+  [1m[35m (90.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 326ms (ActiveRecord: 93.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 17:32:20 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=05598766370
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Jo\xC3\xA3o Alfredo Pinto Moreira"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation.html.erb (9.0ms)
+  Rendered layouts/_topnavbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 405ms (Views: 387.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-02-21 17:35:33 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 17:35:33 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:35:33 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (12.8ms)
+Completed 200 OK in 221ms (Views: 220.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:35:38 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YJNkBiktBs5M/wthLHJtxy92/hGe4hoHED7QgzN/yZSIvCSyYwcbjvkvJoVF05x8XD2ygamsKxJB5MfKFo96Xg==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YJNkBiktBs5M/wthLHJtxy92/hGe4hoHED7QgzN/yZSIvCSyYwcbjvkvJoVF05x8XD2ygamsKxJB5MfKFo96Xg==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.4ms)
+Completed 200 OK in 213ms (Views: 212.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:40:31 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YJNkBiktBs5M/wthLHJtxy92/hGe4hoHED7QgzN/yZSIvCSyYwcbjvkvJoVF05x8XD2ygamsKxJB5MfKFo96Xg==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YJNkBiktBs5M/wthLHJtxy92/hGe4hoHED7QgzN/yZSIvCSyYwcbjvkvJoVF05x8XD2ygamsKxJB5MfKFo96Xg==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (14.8ms)
+Completed 200 OK in 7534ms (Views: 7521.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/notifyjs/notify.self-580979233c906abe103d95ccdbfe97994e5a03d69946ab5b2f74dc3a667fde52.js?body=1" for 127.0.0.1 at 2018-02-21 17:40:39 -0300
+Started GET "/assets/application.self-cdb0ad458c65589c083cfb45a0d0ad897390667ab103d12f6f09848135ace311.js?body=1" for 127.0.0.1 at 2018-02-21 17:40:39 -0300
+Started GET "/assets/notifyjs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2018-02-21 17:40:39 -0300
+Started GET "/assets/logo_tj_favicon-691eca4ca99d9aaedf2c45fbb9bbb7c5713a66b19a05e37e49e62cc929810d70.png" for 127.0.0.1 at 2018-02-21 17:40:39 -0300
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-21 17:40:50 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ox4maGxmAZCM1JIGhZuAqZVRJT4iO6Z3CImwp0UhDZLTMWbcJkwc0DkEv+LsOnES5hpprhV1l2JZU6fuYNG+WA==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900828"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Romulo Augusto de melo Fortaleza,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-21 20:40:50.553589"], ["last_sign_in_at", "2018-02-21 20:30:22.202709"], ["sign_in_count", 7], ["updated_at", "2018-02-21 20:40:50.554414"], ["id", 1]]
+  [1m[35m (124.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 168ms (ActiveRecord: 125.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-21 17:40:50 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (5.6ms)
+  Rendered layouts/_topnavbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 219ms (Views: 200.4ms | ActiveRecord: 0.3ms)
+
+

@@ -21,7 +21,9 @@ gem 'nprogress-rails'
 
 gem 'devise'
 gem 'devise-i18n'
+gem "devise_ldap_authenticatable"
 gem 'bower-rails'
+gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
 gem 'activerecord-oracle_enhanced-adapter', '~> 1.8.0'
 gem 'ruby-oci8', '~> 2.2.4.1'
 gem 'jquery-datatables'

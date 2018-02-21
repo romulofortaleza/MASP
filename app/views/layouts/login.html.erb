@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MASP</title>
+    <title>SiN-MASP</title>
 
     <!-- Include style per-controller - vendor plugins -->
     <%= stylesheet_link_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.css") %>
@@ -29,7 +29,7 @@
 
             <div class="col-md-12">
                 <div align="center">
-                    <h2 class="font-bold" style="color: #366c59;font-family: arial, Helvetica, sans-serif;">MASP - Movimento de Apoio ao Sistema Prisional</h2>
+                    <h2 class="font-bold" style="color: #366c59;font-family: arial, Helvetica, sans-serif;">SiN-MASP - Movimento de Apoio ao Sistema Prisional</h2>
                 </div>
 
 
@@ -91,9 +91,9 @@
                                 </div> -->
 
                                 <div class="field">
-                                  <%= f.label :email, "Usuário" %><br/>
+                                  <%= f.label :username, "Usuário" %><br/>
 
-                                  <%= f.text_field :email, autofocus: true, class: "form-control", placeholder: "Usuário" %>
+                                  <%= f.text_field :username, autofocus: true, class: "form-control", placeholder: "Usuário" %>
                               </div>
 
                               <br/>
