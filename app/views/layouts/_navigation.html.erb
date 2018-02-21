@@ -5,12 +5,12 @@
                 <div class="dropdown profile-element">
                   <span>
                       <%= link_to "/home/index" do %>
-                          <img alt="image" class="img-circle" src="<%= image_url 'masp.png' %>"/>
+                          <img alt="image" class="img-circle" src="<%= image_url 'masp2.png' %>"/>
                       <% end %>
                   </span>
                 </div>
                 <div class="logo-element">
-                    MASP
+                    <img alt="image" class="img-circle-mini" src="<%= image_url 'masp1.png' %>"/>
                 </div>
             </li>
 
@@ -30,8 +30,8 @@
                         <li class="<%= is_active_action('ReusSecretaria') %>"><%= link_to  reus_listasecretarias_path do %>
                                     <p>Secretaria</p>
                                 <% end %>
-                                </li>
-                      </ul>                  
+                        </li>
+                      </ul>
                   <li class="<%= 'active' if current_page?('/') %>">
                       <%= link_to processos_listaprocessos_path do %>
                       <i class="fa fa-gavel"></i> <span class="nav-label">Audiências</span>

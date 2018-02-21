@@ -2,10 +2,10 @@
   <div class="row">
     <div class="col-lg-12" >
       <div class="text-center m-t-lg">
-                <h1 style ="color: #257752; font-size: 30px; margin: -5px">
-                    <b>RÉUS</b>
-                </h1>
-                <br/><br/>
+          <h1 style ="color: #257752; font-size: 30px; margin: -5px">
+              <b>RÉUS</b>
+          </h1>
+          <br/><br/>
       </div>
       <div class = "reus_denunciados_table">
         <table class="table datatable table-bordered dataTable no-footer" id="tabela_gabinete" style="background-color: white">
@@ -37,8 +37,8 @@
                             <td><%= row["qtd_sentenca"] %></td>
                             <td><%= row["qtd_transito"] %></td>
                         </tr>
-                        <% end %>
-                    </tbody>
+            <% end %>
+          </tbody>
         </table>
       </div>
     </div>
@@ -48,7 +48,7 @@
 <script type="text/javascript">
 
 var table = $('#tabela_gabinete').DataTable({
-          dom: "<'row'<'col-sm-12'B>>" + "<'row'<'col-sm-6'l><'col-sm-6'f>>" + "<'row'<'col-sm-12'tr>>" + "<'row'<'col-sm-5'i><'col-sm-7'p>>",
+          dom: "<'row'<'col-sm-6'l><'col-sm-6'f>>" + "<'row'<'col-sm-12'B>>" + "<'row'<'col-sm-12'tr>>" + "<'row'<'col-sm-12'B>>" + "<'row'<'col-sm-5'i><'col-sm-7'p>>",
           order: [[ 3, "asc" ]],
           buttons: [
               {
@@ -77,6 +77,7 @@ var table = $('#tabela_gabinete').DataTable({
                   }
               }
           ],
+
 
           columnDefs : [{"width": "10%", "targets": 0 },
                         {"width": "10%", "targets": 1 },
