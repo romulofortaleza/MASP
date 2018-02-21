@@ -1,4 +1,10 @@
 Myapp::Application.routes.draw do
+  devise_for :users
+
+  #Main Pages
+  get "home/index"
+
+
   get 'reus/listasecretarias'
 
   get 'audiencias/listaaudiencias'

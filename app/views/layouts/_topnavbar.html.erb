@@ -7,12 +7,10 @@
         <li>
           <%= link_to('MASP - MOVIMENTO DE APOIO AO SISTEMA PRISIONAL', home_index_path, :style => "color: #257752; font-size: 18px; margin: -5px" )%>
         </li>
-
-        <ul class="nav navbar-top-links navbar-right">
-            <li>
-                <a href="#">
-                    <i class="fa fa-sign-out"></i> Log out
-                </a>
+        <li class="pull-right" >
+          <% if user_signed_in? %>
+            <%= link_to('Sair', destroy_user_session_path, :class => "fa fa-sign-out", :style => "color: #257752" )%>
+          <% end %>
             </li>
         </ul>
     </nav>
