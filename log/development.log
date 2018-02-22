@@ -28138,3 +28138,1978 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 219ms (Views: 200.4ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-02-22 08:43:32 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 24ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-22 08:43:34 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (94.7ms)
+Completed 200 OK in 4158ms (Views: 4121.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/style.self-167d1632199aff65e3311f142e72531b5cfe228434ed733029b6037d72860cfd.css?body=1" for 127.0.0.1 at 2018-02-22 08:43:38 -0300
+Started GET "/assets/datatables/jquery.dataTables.self-09a1cac04cf9882e653cf3df15b46bed5a3c238a839c9d6040e30a14144af1f5.js?body=1" for 127.0.0.1 at 2018-02-22 08:43:38 -0300
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 08:44:00 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oNEjnZE8SAmZfMjya/v69y98GIigD6pOf62X4o43DknhREgxw9PiLmiRZCbXgHsICsxyZRrEKRCajSBdFoxBRg==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900828"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Romulo Augusto de melo Fortaleza,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (57.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-22 11:44:00.357085"], ["last_sign_in_at", "2018-02-21 20:40:50.553589"], ["sign_in_count", 8], ["updated_at", "2018-02-22 11:44:00.358396"], ["id", 1]]
+  [1m[35m (96.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 521ms (ActiveRecord: 154.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 08:44:00 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (4.1ms)
+  Rendered layouts/_topnavbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (10.8ms)
+Completed 200 OK in 369ms (Views: 332.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reus/listareus" for 127.0.0.1 at 2018-02-22 08:44:16 -0300
+Processing by ReusController#listareus as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (72.2ms)[0m  [1m[34mselect cprm.cprm_dsc_grupo_vara, cprm.cprm_dsc_vara, cprm.cprm_dsc_tipo_processo, cprm.cprm_dsc_processo,
+       cprm.cprm_dsc_situacao_processo, cprm.cprm_nom_pessoa_reu, cprm.cprm_dsc_assunto,
+       case
+         when cprm.cprm_dat_oferecimento_denuncia is not null and cprm.cprm_dat_recebimento_denuncia is null and
+              cprm.cprm_dat_citacao is null and cprm.cprm_dat_defesa_preliminar is null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_oferecimento_denuncia,
+       case
+         when cprm.cprm_dat_recebimento_denuncia is not null and
+              cprm.cprm_dat_citacao is null and cprm.cprm_dat_defesa_preliminar is null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_recebimento_denuncia,
+       case
+         when cprm.cprm_dat_citacao is not null and cprm.cprm_dat_defesa_preliminar is null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_citacao,
+       case
+         when cprm.cprm_dat_defesa_preliminar is not null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_defesa_preliminar,
+       case
+         when cprm.cprm_dat_inicio_instrucao is not null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_inicio_instrucao,
+       case
+         when cprm.cprm_dat_fim_instrucao is not null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_fim_instrucao,
+       case
+         when cprm.cprm_dat_memoriais_acusacao is not null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_memoriais_acusacao,
+       case
+         when cprm.cprm_dat_memoriais_defesa is not null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_memoriais_defesa,
+       case
+         when cprm.cprm_dat_sentenca is not null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_sentenca,
+       case
+         when cprm.cprm_dat_transito is not null then 1
+         else 0
+       end qtd_transito
+from dwfcb.tcprm_ciclo_processo_reu_masp cprm
+where cprm.cprm_num_ciclo = 1
+  and cprm.cprm_cod_vara <> 36 --12ª Vara Criminal
+  and cprm.cprm_dat_inicio_execucao is null
+  and (cprm.cprm_dat_oferecimento_denuncia is not null
+    or cprm.cprm_dat_recebimento_denuncia is not null)
+order by cprm.cprm_dsc_grupo_vara, cprm.cprm_dsc_vara, cprm.cprm_nom_pessoa_reu[0m
+  Rendering reus/listareus.html.erb within layouts/application
+  Rendered reus/listareus.html.erb within layouts/application (31.3ms)
+  Rendered layouts/_navigation.html.erb (8.6ms)
+  Rendered layouts/_topnavbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 979ms (Views: 340.9ms | ActiveRecord: 72.5ms)
+
+
+Started GET "/reus/listasecretarias" for 127.0.0.1 at 2018-02-22 08:44:21 -0300
+Processing by ReusController#listasecretarias as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering reus/listasecretarias.html.erb within layouts/application
+  Rendered reus/listasecretarias.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (11.0ms)
+  Rendered layouts/_topnavbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 286ms (Views: 282.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reus/listareus" for 127.0.0.1 at 2018-02-22 08:44:23 -0300
+Processing by ReusController#listareus as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (81.0ms)[0m  [1m[34mselect cprm.cprm_dsc_grupo_vara, cprm.cprm_dsc_vara, cprm.cprm_dsc_tipo_processo, cprm.cprm_dsc_processo,
+       cprm.cprm_dsc_situacao_processo, cprm.cprm_nom_pessoa_reu, cprm.cprm_dsc_assunto,
+       case
+         when cprm.cprm_dat_oferecimento_denuncia is not null and cprm.cprm_dat_recebimento_denuncia is null and
+              cprm.cprm_dat_citacao is null and cprm.cprm_dat_defesa_preliminar is null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_oferecimento_denuncia,
+       case
+         when cprm.cprm_dat_recebimento_denuncia is not null and
+              cprm.cprm_dat_citacao is null and cprm.cprm_dat_defesa_preliminar is null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_recebimento_denuncia,
+       case
+         when cprm.cprm_dat_citacao is not null and cprm.cprm_dat_defesa_preliminar is null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_citacao,
+       case
+         when cprm.cprm_dat_defesa_preliminar is not null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_defesa_preliminar,
+       case
+         when cprm.cprm_dat_inicio_instrucao is not null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_inicio_instrucao,
+       case
+         when cprm.cprm_dat_fim_instrucao is not null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_fim_instrucao,
+       case
+         when cprm.cprm_dat_memoriais_acusacao is not null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_memoriais_acusacao,
+       case
+         when cprm.cprm_dat_memoriais_defesa is not null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_memoriais_defesa,
+       case
+         when cprm.cprm_dat_sentenca is not null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_sentenca,
+       case
+         when cprm.cprm_dat_transito is not null then 1
+         else 0
+       end qtd_transito
+from dwfcb.tcprm_ciclo_processo_reu_masp cprm
+where cprm.cprm_num_ciclo = 1
+  and cprm.cprm_cod_vara <> 36 --12ª Vara Criminal
+  and cprm.cprm_dat_inicio_execucao is null
+  and (cprm.cprm_dat_oferecimento_denuncia is not null
+    or cprm.cprm_dat_recebimento_denuncia is not null)
+order by cprm.cprm_dsc_grupo_vara, cprm.cprm_dsc_vara, cprm.cprm_nom_pessoa_reu[0m
+  Rendering reus/listareus.html.erb within layouts/application
+  Rendered reus/listareus.html.erb within layouts/application (20.3ms)
+  Rendered layouts/_navigation.html.erb (8.7ms)
+  Rendered layouts/_topnavbar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 427ms (Views: 340.7ms | ActiveRecord: 81.3ms)
+
+
+Started GET "/reus/listasecretarias" for 127.0.0.1 at 2018-02-22 08:44:28 -0300
+Processing by ReusController#listasecretarias as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering reus/listasecretarias.html.erb within layouts/application
+  Rendered reus/listasecretarias.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (11.5ms)
+  Rendered layouts/_topnavbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 317ms (Views: 314.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/reus/listareus" for 127.0.0.1 at 2018-02-22 08:44:32 -0300
+Processing by ReusController#listareus as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (73.1ms)[0m  [1m[34mselect cprm.cprm_dsc_grupo_vara, cprm.cprm_dsc_vara, cprm.cprm_dsc_tipo_processo, cprm.cprm_dsc_processo,
+       cprm.cprm_dsc_situacao_processo, cprm.cprm_nom_pessoa_reu, cprm.cprm_dsc_assunto,
+       case
+         when cprm.cprm_dat_oferecimento_denuncia is not null and cprm.cprm_dat_recebimento_denuncia is null and
+              cprm.cprm_dat_citacao is null and cprm.cprm_dat_defesa_preliminar is null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_oferecimento_denuncia,
+       case
+         when cprm.cprm_dat_recebimento_denuncia is not null and
+              cprm.cprm_dat_citacao is null and cprm.cprm_dat_defesa_preliminar is null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_recebimento_denuncia,
+       case
+         when cprm.cprm_dat_citacao is not null and cprm.cprm_dat_defesa_preliminar is null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_citacao,
+       case
+         when cprm.cprm_dat_defesa_preliminar is not null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_defesa_preliminar,
+       case
+         when cprm.cprm_dat_inicio_instrucao is not null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_inicio_instrucao,
+       case
+         when cprm.cprm_dat_fim_instrucao is not null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_fim_instrucao,
+       case
+         when cprm.cprm_dat_memoriais_acusacao is not null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_memoriais_acusacao,
+       case
+         when cprm.cprm_dat_memoriais_defesa is not null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_memoriais_defesa,
+       case
+         when cprm.cprm_dat_sentenca is not null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_sentenca,
+       case
+         when cprm.cprm_dat_transito is not null then 1
+         else 0
+       end qtd_transito
+from dwfcb.tcprm_ciclo_processo_reu_masp cprm
+where cprm.cprm_num_ciclo = 1
+  and cprm.cprm_cod_vara <> 36 --12ª Vara Criminal
+  and cprm.cprm_dat_inicio_execucao is null
+  and (cprm.cprm_dat_oferecimento_denuncia is not null
+    or cprm.cprm_dat_recebimento_denuncia is not null)
+order by cprm.cprm_dsc_grupo_vara, cprm.cprm_dsc_vara, cprm.cprm_nom_pessoa_reu[0m
+  Rendering reus/listareus.html.erb within layouts/application
+  Rendered reus/listareus.html.erb within layouts/application (24.6ms)
+  Rendered layouts/_navigation.html.erb (10.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 435ms (Views: 356.1ms | ActiveRecord: 73.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 09:52:48 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-22 09:52:49 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (95.4ms)
+Completed 200 OK in 2170ms (Views: 2098.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.self-cdb0ad458c65589c083cfb45a0d0ad897390667ab103d12f6f09848135ace311.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/application.self-57a5f2f33d24688136dc6332b520d3b3a2ccbecbbf5034f5c20480f3e4d12d6b.css?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/font-awesome.self-2a86d2017f4b74f22943750b3b50b9cb753581bab96cbdaaf2df53f4c04c995b.css?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/datatables.self-99d41092a8f4535312355a007ff8568bd28e325a97f55174ce911ffa49eadfc5.css?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/nprogress.self-184d1db22dda064c876937bb5d91fa506c3d56621c3fc8ce219c005f66fb8f2d.css?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/nprogress-bootstrap.self-7efdbc7e2b02b0837cf1bf51a1a6550500b79d294e29f11c234858ab56485438.css?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/style.self-167d1632199aff65e3311f142e72531b5cfe228434ed733029b6037d72860cfd.css?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/animate/animate.self-570992b3ad6a262de1924aa4ecc17a6f9cf45cb8fd0daaf3cfe5a9f2f3e08e2e.css?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/jquery/jquery-3.1.1.min.self-9347a28e490a684188bc8e7748f6f086a53a87088854ac4de47095f42a085b5b.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/nprogress-turbolinks5.self-1759ad2c73d6b6e93cda9150dbcd89e39df501ad601eaba5b547bc0cbf3ed213.css?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/notifyjs/notify.self-580979233c906abe103d95ccdbfe97994e5a03d69946ab5b2f74dc3a667fde52.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/notifyjs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/pace/pace.min.self-9bf6d667514a59744d5db2c9392aaf5595dec9c131a425ababa1cb8cddb814f2.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/slimscroll/jquery.slimscroll.min.self-a2008e2992d055fbe5108d326a54c3083f843da1a30240d2b2e1f706716fa03e.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/metisMenu/jquery.metisMenu.self-587029531d977fc7fa10623dd670189a298bd606124c23fc2edd051da5b0c914.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/datatables/jquery.dataTables.self-09a1cac04cf9882e653cf3df15b46bed5a3c238a839c9d6040e30a14144af1f5.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.html5.self-cd8c1c8e2a50e602e3f7b1c6461f9e580d45e9b3263d8ff6faabf7f621089cc7.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/datatables/extensions/Buttons/dataTables.buttons.self-90012c937b1d95a2f530de773518fb74505f64fab21cf33a9083e17612b9d7f4.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.print.self-7aa983e0c236c36a6ed90ee582dee448015dec0ca98dbe8881e9102137fa47ca.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.colVis.self-11afe91df33a12487073f276c98a16ba5d3a38b46803b98d6c38355b6fb745a7.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/datatables/extensions/Select/dataTables.select.self-862eade47f647d6c4a51c90184450d132cbed38241e6edcc9b818b36a21a2529.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.flash.self-b4a6e56a9b14d6f48960cfdb4f551a0512311bdee6ff0dbb2d1a8d427efdbf14.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/datatables/dataTables.bootstrap.self-1daa7c39356fe20af3e5d9f9b7396892d0151ce99bd97a22e590e2423965dee0.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.bootstrap.self-dee2b8c947331c508b40e4b9a8cb92e0e6e01fbc721397172c468b221fe950ef.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/datatables.self-f851246b3ae5838a3c37afdd22ea6e4499a54da1d61653eb710e526a440c8bdc.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/nprogress-turbolinks.self-73d7454bfd7992e3690d8d20270ede57910e91c4f710672315c01bdcf68a138d.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/nprogress.self-d24f5ce72cb21aaa85a63e5ccf83aff7839951dc475bde8f4bc239c35f0d47bb.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/audiencias.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/inspinia.self-0105b2740ac6f751553fae37cd22fd48eee7a5092c5c29e32b685e736a59e704.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/datatables_order_plugin.self-2faa82593c9f617a0c36f48e88d14152cabd3b0ff24f0dbf37fcf120865b43ee.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/reus.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/processos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-22 09:52:51 -0300
+Started GET "/assets/logo_tj-627db004f2ee4a2b7657bd9a0a42a5b1cfe39a0409ffa49f14bb0cd21c81a373.png" for 127.0.0.1 at 2018-02-22 09:52:52 -0300
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 09:53:08 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LhTWe+6IaYostu4Tcr16ScAnd5q0jdpQirqqejveW5+jMTRDp1QtZB9VGHc4p4XWdY7sQPQQIJQWLiftTp+nYg==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900828"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Romulo Augusto de melo Fortaleza,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-22 12:53:08.527012"], ["last_sign_in_at", "2018-02-22 11:44:00.357085"], ["sign_in_count", 9], ["updated_at", "2018-02-22 12:53:08.528012"], ["id", 1]]
+  [1m[35m (91.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 304ms (ActiveRecord: 93.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 09:53:08 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (7.7ms)
+  Rendered layouts/_topnavbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 240ms (Views: 218.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reus/listareus" for 127.0.0.1 at 2018-02-22 09:54:05 -0300
+Processing by ReusController#listareus as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (83.0ms)[0m  [1m[34mselect cprm.cprm_dsc_grupo_vara, cprm.cprm_dsc_vara, cprm.cprm_dsc_tipo_processo, cprm.cprm_dsc_processo,
+       cprm.cprm_dsc_situacao_processo, cprm.cprm_nom_pessoa_reu, cprm.cprm_dsc_assunto,
+       case
+         when cprm.cprm_dat_oferecimento_denuncia is not null and cprm.cprm_dat_recebimento_denuncia is null and
+              cprm.cprm_dat_citacao is null and cprm.cprm_dat_defesa_preliminar is null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_oferecimento_denuncia,
+       case
+         when cprm.cprm_dat_recebimento_denuncia is not null and
+              cprm.cprm_dat_citacao is null and cprm.cprm_dat_defesa_preliminar is null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_recebimento_denuncia,
+       case
+         when cprm.cprm_dat_citacao is not null and cprm.cprm_dat_defesa_preliminar is null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_citacao,
+       case
+         when cprm.cprm_dat_defesa_preliminar is not null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_defesa_preliminar,
+       case
+         when cprm.cprm_dat_inicio_instrucao is not null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_inicio_instrucao,
+       case
+         when cprm.cprm_dat_fim_instrucao is not null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_fim_instrucao,
+       case
+         when cprm.cprm_dat_memoriais_acusacao is not null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_memoriais_acusacao,
+       case
+         when cprm.cprm_dat_memoriais_defesa is not null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_memoriais_defesa,
+       case
+         when cprm.cprm_dat_sentenca is not null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_sentenca,
+       case
+         when cprm.cprm_dat_transito is not null then 1
+         else 0
+       end qtd_transito
+from dwfcb.tcprm_ciclo_processo_reu_masp cprm
+where cprm.cprm_num_ciclo = 1
+  and cprm.cprm_cod_vara <> 36 --12ª Vara Criminal
+  and cprm.cprm_dat_inicio_execucao is null
+  and (cprm.cprm_dat_oferecimento_denuncia is not null
+    or cprm.cprm_dat_recebimento_denuncia is not null)
+order by cprm.cprm_dsc_grupo_vara, cprm.cprm_dsc_vara, cprm.cprm_nom_pessoa_reu[0m
+  Rendering reus/listareus.html.erb within layouts/application
+  Rendered reus/listareus.html.erb within layouts/application (24.0ms)
+  Rendered layouts/_navigation.html.erb (8.5ms)
+  Rendered layouts/_topnavbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 543ms (Views: 344.3ms | ActiveRecord: 83.3ms)
+
+
+Started GET "/processos/listaprocessos" for 127.0.0.1 at 2018-02-22 09:55:49 -0300
+Processing by ProcessosController#listaprocessos as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering processos/listaprocessos.html.erb within layouts/application
+  Rendered processos/listaprocessos.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_topnavbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 123ms (Views: 120.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-02-22 09:56:06 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 48ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 09:56:06 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-22 09:56:06 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (4.8ms)
+Completed 200 OK in 292ms (Views: 290.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 10:23:16 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/FV2eR5rokF+rDt7kDziaddG03catHZuwSKR7VRi3jAdIy/E8dY0JTbIIpi5o+UJlGbl0CW6uvH0hPcZQOAC8A==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/FV2eR5rokF+rDt7kDziaddG03catHZuwSKR7VRi3jAdIy/E8dY0JTbIIpi5o+UJlGbl0CW6uvH0hPcZQOAC8A==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (12.2ms)
+Completed 200 OK in 237ms (Views: 235.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 10:34:52 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WUcYuv/Y6bORxxKegcSUo9j4N3GeVS5uUDnL1TfMOSa4MUEHEGV/19mjC32oW5PDm9gB1qFb4vFln60hI07l5g==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 59ms
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WUcYuv/Y6bORxxKegcSUo9j4N3GeVS5uUDnL1TfMOSa4MUEHEGV/19mjC32oW5PDm9gB1qFb4vFln60hI07l5g==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (4.7ms)
+Completed 200 OK in 1013ms (Views: 949.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 10:38:07 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-22 10:38:07 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (95.5ms)
+Completed 200 OK in 2280ms (Views: 2243.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self-57a5f2f33d24688136dc6332b520d3b3a2ccbecbbf5034f5c20480f3e4d12d6b.css?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/nprogress-turbolinks5.self-1759ad2c73d6b6e93cda9150dbcd89e39df501ad601eaba5b547bc0cbf3ed213.css?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/datatables.self-99d41092a8f4535312355a007ff8568bd28e325a97f55174ce911ffa49eadfc5.css?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/nprogress.self-184d1db22dda064c876937bb5d91fa506c3d56621c3fc8ce219c005f66fb8f2d.css?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/font-awesome.self-2a86d2017f4b74f22943750b3b50b9cb753581bab96cbdaaf2df53f4c04c995b.css?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/nprogress-bootstrap.self-7efdbc7e2b02b0837cf1bf51a1a6550500b79d294e29f11c234858ab56485438.css?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/notifyjs/notify.self-580979233c906abe103d95ccdbfe97994e5a03d69946ab5b2f74dc3a667fde52.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/animate/animate.self-570992b3ad6a262de1924aa4ecc17a6f9cf45cb8fd0daaf3cfe5a9f2f3e08e2e.css?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/style.self-167d1632199aff65e3311f142e72531b5cfe228434ed733029b6037d72860cfd.css?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/jquery/jquery-3.1.1.min.self-9347a28e490a684188bc8e7748f6f086a53a87088854ac4de47095f42a085b5b.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/notifyjs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/metisMenu/jquery.metisMenu.self-587029531d977fc7fa10623dd670189a298bd606124c23fc2edd051da5b0c914.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/pace/pace.min.self-9bf6d667514a59744d5db2c9392aaf5595dec9c131a425ababa1cb8cddb814f2.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/datatables/jquery.dataTables.self-09a1cac04cf9882e653cf3df15b46bed5a3c238a839c9d6040e30a14144af1f5.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/slimscroll/jquery.slimscroll.min.self-a2008e2992d055fbe5108d326a54c3083f843da1a30240d2b2e1f706716fa03e.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/datatables/extensions/Buttons/dataTables.buttons.self-90012c937b1d95a2f530de773518fb74505f64fab21cf33a9083e17612b9d7f4.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.html5.self-cd8c1c8e2a50e602e3f7b1c6461f9e580d45e9b3263d8ff6faabf7f621089cc7.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.print.self-7aa983e0c236c36a6ed90ee582dee448015dec0ca98dbe8881e9102137fa47ca.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/datatables/dataTables.bootstrap.self-1daa7c39356fe20af3e5d9f9b7396892d0151ce99bd97a22e590e2423965dee0.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.colVis.self-11afe91df33a12487073f276c98a16ba5d3a38b46803b98d6c38355b6fb745a7.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.flash.self-b4a6e56a9b14d6f48960cfdb4f551a0512311bdee6ff0dbb2d1a8d427efdbf14.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/datatables/extensions/Select/dataTables.select.self-862eade47f647d6c4a51c90184450d132cbed38241e6edcc9b818b36a21a2529.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.bootstrap.self-dee2b8c947331c508b40e4b9a8cb92e0e6e01fbc721397172c468b221fe950ef.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/audiencias.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/nprogress-turbolinks.self-73d7454bfd7992e3690d8d20270ede57910e91c4f710672315c01bdcf68a138d.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/datatables.self-f851246b3ae5838a3c37afdd22ea6e4499a54da1d61653eb710e526a440c8bdc.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/nprogress.self-d24f5ce72cb21aaa85a63e5ccf83aff7839951dc475bde8f4bc239c35f0d47bb.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/datatables_order_plugin.self-2faa82593c9f617a0c36f48e88d14152cabd3b0ff24f0dbf37fcf120865b43ee.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/reus.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/processos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/inspinia.self-0105b2740ac6f751553fae37cd22fd48eee7a5092c5c29e32b685e736a59e704.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/application.self-cdb0ad458c65589c083cfb45a0d0ad897390667ab103d12f6f09848135ace311.js?body=1" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started GET "/assets/logo_tj-627db004f2ee4a2b7657bd9a0a42a5b1cfe39a0409ffa49f14bb0cd21c81a373.png" for 127.0.0.1 at 2018-02-22 10:38:10 -0300
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 10:38:28 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KK7XqeAVuK2w3OfLgPvPGkG3AXOcQ+OH40ibtqQY7ovJ2I4UD6guyfi4/iipZMh6Apc31KNNLxjW7v1CsJoySw==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KK7XqeAVuK2w3OfLgPvPGkG3AXOcQ+OH40ibtqQY7ovJ2I4UD6guyfi4/iipZMh6Apc31KNNLxjW7v1CsJoySw==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.7ms)
+Completed 200 OK in 269ms (Views: 268.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 10:38:50 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sywBiz+fCkDXNwa0OuEr1z2L6Iu3m6YBjrRGNYkYuWtSWlg20CKcJJ9TH1cTfiy3fqveLIiVap67EiDBnZplqw==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sywBiz+fCkDXNwa0OuEr1z2L6Iu3m6YBjrRGNYkYuWtSWlg20CKcJJ9TH1cTfiy3fqveLIiVap67EiDBnZplqw==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.6ms)
+Completed 200 OK in 143ms (Views: 142.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 10:38:58 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qSw1rtuXy9RaKeCCmDELUBJFZ3PatOo0FR1PJeEWo5BIWmwTNCpdsBJN+WGxrgwwUWVR1OW6JqsguynR9ZR/UA==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qSw1rtuXy9RaKeCCmDELUBJFZ3PatOo0FR1PJeEWo5BIWmwTNCpdsBJN+WGxrgwwUWVR1OW6JqsguynR9ZR/UA==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.2ms)
+Completed 200 OK in 122ms (Views: 121.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 10:39:15 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qSw1rtuXy9RaKeCCmDELUBJFZ3PatOo0FR1PJeEWo5BIWmwTNCpdsBJN+WGxrgwwUWVR1OW6JqsguynR9ZR/UA==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qSw1rtuXy9RaKeCCmDELUBJFZ3PatOo0FR1PJeEWo5BIWmwTNCpdsBJN+WGxrgwwUWVR1OW6JqsguynR9ZR/UA==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (4.0ms)
+Completed 200 OK in 151ms (Views: 150.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-57a5f2f33d24688136dc6332b520d3b3a2ccbecbbf5034f5c20480f3e4d12d6b.css?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/nprogress.self-184d1db22dda064c876937bb5d91fa506c3d56621c3fc8ce219c005f66fb8f2d.css?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/datatables.self-99d41092a8f4535312355a007ff8568bd28e325a97f55174ce911ffa49eadfc5.css?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/nprogress-bootstrap.self-7efdbc7e2b02b0837cf1bf51a1a6550500b79d294e29f11c234858ab56485438.css?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/animate/animate.self-570992b3ad6a262de1924aa4ecc17a6f9cf45cb8fd0daaf3cfe5a9f2f3e08e2e.css?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/nprogress-turbolinks5.self-1759ad2c73d6b6e93cda9150dbcd89e39df501ad601eaba5b547bc0cbf3ed213.css?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/font-awesome.self-2a86d2017f4b74f22943750b3b50b9cb753581bab96cbdaaf2df53f4c04c995b.css?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/jquery/jquery-3.1.1.min.self-9347a28e490a684188bc8e7748f6f086a53a87088854ac4de47095f42a085b5b.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/style.self-167d1632199aff65e3311f142e72531b5cfe228434ed733029b6037d72860cfd.css?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/notifyjs/notify.self-580979233c906abe103d95ccdbfe97994e5a03d69946ab5b2f74dc3a667fde52.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/notifyjs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/pace/pace.min.self-9bf6d667514a59744d5db2c9392aaf5595dec9c131a425ababa1cb8cddb814f2.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/slimscroll/jquery.slimscroll.min.self-a2008e2992d055fbe5108d326a54c3083f843da1a30240d2b2e1f706716fa03e.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/datatables/jquery.dataTables.self-09a1cac04cf9882e653cf3df15b46bed5a3c238a839c9d6040e30a14144af1f5.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.html5.self-cd8c1c8e2a50e602e3f7b1c6461f9e580d45e9b3263d8ff6faabf7f621089cc7.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/metisMenu/jquery.metisMenu.self-587029531d977fc7fa10623dd670189a298bd606124c23fc2edd051da5b0c914.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/datatables/extensions/Buttons/dataTables.buttons.self-90012c937b1d95a2f530de773518fb74505f64fab21cf33a9083e17612b9d7f4.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.print.self-7aa983e0c236c36a6ed90ee582dee448015dec0ca98dbe8881e9102137fa47ca.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.flash.self-b4a6e56a9b14d6f48960cfdb4f551a0512311bdee6ff0dbb2d1a8d427efdbf14.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.colVis.self-11afe91df33a12487073f276c98a16ba5d3a38b46803b98d6c38355b6fb745a7.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/datatables/dataTables.bootstrap.self-1daa7c39356fe20af3e5d9f9b7396892d0151ce99bd97a22e590e2423965dee0.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.bootstrap.self-dee2b8c947331c508b40e4b9a8cb92e0e6e01fbc721397172c468b221fe950ef.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/datatables/extensions/Select/dataTables.select.self-862eade47f647d6c4a51c90184450d132cbed38241e6edcc9b818b36a21a2529.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/nprogress.self-d24f5ce72cb21aaa85a63e5ccf83aff7839951dc475bde8f4bc239c35f0d47bb.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/nprogress-turbolinks.self-73d7454bfd7992e3690d8d20270ede57910e91c4f710672315c01bdcf68a138d.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/datatables_order_plugin.self-2faa82593c9f617a0c36f48e88d14152cabd3b0ff24f0dbf37fcf120865b43ee.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/datatables.self-f851246b3ae5838a3c37afdd22ea6e4499a54da1d61653eb710e526a440c8bdc.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/audiencias.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/inspinia.self-0105b2740ac6f751553fae37cd22fd48eee7a5092c5c29e32b685e736a59e704.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/processos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/reus.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/application.self-cdb0ad458c65589c083cfb45a0d0ad897390667ab103d12f6f09848135ace311.js?body=1" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started GET "/assets/logo_tj-627db004f2ee4a2b7657bd9a0a42a5b1cfe39a0409ffa49f14bb0cd21c81a373.png" for 127.0.0.1 at 2018-02-22 10:39:16 -0300
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 10:39:24 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0vnQCmQVD6XoD7DDqJTnWB04hPPB3I9NLG3j0J6G0Sozj4m3i6iZwaBrqSCBC+A4XhiyVP7SQ9IZy4UkigQN6g==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900828"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Romulo Augusto de melo Fortaleza,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (38.9ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-22 13:39:24.414432"], ["last_sign_in_at", "2018-02-22 12:53:08.527012"], ["sign_in_count", 10], ["updated_at", "2018-02-22 13:39:24.415257"], ["id", 1]]
+  [1m[35m (170.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 466ms (ActiveRecord: 209.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 10:39:24 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (4.0ms)
+  Rendered layouts/_topnavbar.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (11.8ms)
+Completed 200 OK in 460ms (Views: 428.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/processos/listaprocessos" for 127.0.0.1 at 2018-02-22 10:39:36 -0300
+Processing by ProcessosController#listaprocessos as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering processos/listaprocessos.html.erb within layouts/application
+  Rendered processos/listaprocessos.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (8.7ms)
+  Rendered layouts/_topnavbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 337ms (Views: 319.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 10:40:04 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (11.7ms)
+  Rendered layouts/_topnavbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 334ms (Views: 309.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 11:49:27 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-22 11:49:27 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (59.8ms)
+Completed 200 OK in 3440ms (Views: 3396.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/style.self-167d1632199aff65e3311f142e72531b5cfe228434ed733029b6037d72860cfd.css?body=1" for 127.0.0.1 at 2018-02-22 11:49:31 -0300
+Started GET "/assets/datatables/jquery.dataTables.self-09a1cac04cf9882e653cf3df15b46bed5a3c238a839c9d6040e30a14144af1f5.js?body=1" for 127.0.0.1 at 2018-02-22 11:49:31 -0300
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 11:49:42 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xcy8oliBfhxmIRGrV/9IVyJP8b1u1I5ccbK7PGk8TrDryWdFEXi6OG/MT5MFsUfgnqcB+yOToNr1EgIYSnKnGQ==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900828"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Romulo Augusto de melo Fortaleza,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-22 14:49:43.237819"], ["last_sign_in_at", "2018-02-22 13:39:24.414432"], ["sign_in_count", 11], ["updated_at", "2018-02-22 14:49:43.238610"], ["id", 1]]
+  [1m[35m (178.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1203ms (ActiveRecord: 179.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 11:49:43 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (6.1ms)
+  Rendered layouts/_topnavbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 266ms (Views: 237.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-02-22 11:49:47 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 29ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 11:49:47 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-22 11:49:47 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.5ms)
+Completed 200 OK in 228ms (Views: 227.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 11:49:57 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HC5o7IuZx034sQ9UhrpdQ68/ribWmt+ecf0b9qLRpTCAdlqs7MRWwaAj80q1/cRzGIQxwlZIuI3XjDiLX+4AaQ==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HC5o7IuZx034sQ9UhrpdQ68/ribWmt+ecf0b9qLRpTCAdlqs7MRWwaAj80q1/cRzGIQxwlZIuI3XjDiLX+4AaQ==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.6ms)
+Completed 200 OK in 224ms (Views: 223.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 11:50:11 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"osRcwlyHS3qKRN3eGdQETQLLzGUCGY8JIQo0lkeUios+nG6CO9ra9tLWIcAqk519tXBTgYLL6BqHexfruqsv0g==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"osRcwlyHS3qKRN3eGdQETQLLzGUCGY8JIQo0lkeUios+nG6CO9ra9tLWIcAqk519tXBTgYLL6BqHexfruqsv0g==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.4ms)
+Completed 200 OK in 220ms (Views: 219.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 11:51:23 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"30KkIaC3/FGYbiEpL60sHgLW170r5ppxTyLfYaSlEgNDGpZhx+pt3cD83Tcc6rUutW1IWas0/WLpU/wcWZq3Wg==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"30KkIaC3/FGYbiEpL60sHgLW170r5ppxTyLfYaSlEgNDGpZhx+pt3cD83Tcc6rUutW1IWas0/WLpU/wcWZq3Wg==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (6.0ms)
+Completed 200 OK in 227ms (Views: 226.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 11:51:25 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wSKnqs3uRzmq0AAV9OlGgAP0bMix5v76t2Qvc9NxDltdepXqqrPWtfJC/AvHrt+wtE/zLDE0mekRFQwOLk6rAg==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wSKnqs3uRzmq0AAV9OlGgAP0bMix5v76t2Qvc9NxDltdepXqqrPWtfJC/AvHrt+wtE/zLDE0mekRFQwOLk6rAg==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.4ms)
+Completed 200 OK in 243ms (Views: 242.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 13:44:16 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EyDWLrx3a0ljQxCT0J5QZ9D7RIptndDERzBQoZyTOK2PeORu2yr6xTvR7I3j2clXZ0Dbbu1Pt9fhQXPcYayd9A==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 42ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EyDWLrx3a0ljQxCT0J5QZ9D7RIptndDERzBQoZyTOK2PeORu2yr6xTvR7I3j2clXZ0Dbbu1Pt9fhQXPcYayd9A==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (61.4ms)
+Completed 200 OK in 679ms (Views: 678.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.self-167d1632199aff65e3311f142e72531b5cfe228434ed733029b6037d72860cfd.css?body=1" for 127.0.0.1 at 2018-02-22 13:44:17 -0300
+Started GET "/" for 127.0.0.1 at 2018-02-22 13:53:44 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 43ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-22 13:53:47 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (16.8ms)
+Completed 200 OK in 792ms (Views: 704.3ms | ActiveRecord: 8.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 13:53:58 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c6vR6EYSJ3+LBUAleANOMfyTAQIzRnwbIVkzvZdh9cxAnnSFDHkCKKc0uSFwiH0IKpYn2TyDCgf+yH4wlseWNg==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c6vR6EYSJ3+LBUAleANOMfyTAQIzRnwbIVkzvZdh9cxAnnSFDHkCKKc0uSFwiH0IKpYn2TyDCgf+yH4wlseWNg==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (2.8ms)
+Completed 200 OK in 222ms (Views: 221.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-22 13:55:03 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (366.3ms)
+Completed 200 OK in 3909ms (Views: 3822.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-57a5f2f33d24688136dc6332b520d3b3a2ccbecbbf5034f5c20480f3e4d12d6b.css?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/font-awesome.self-2a86d2017f4b74f22943750b3b50b9cb753581bab96cbdaaf2df53f4c04c995b.css?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/nprogress-turbolinks5.self-1759ad2c73d6b6e93cda9150dbcd89e39df501ad601eaba5b547bc0cbf3ed213.css?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/nprogress-bootstrap.self-7efdbc7e2b02b0837cf1bf51a1a6550500b79d294e29f11c234858ab56485438.css?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/nprogress.self-184d1db22dda064c876937bb5d91fa506c3d56621c3fc8ce219c005f66fb8f2d.css?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/datatables.self-99d41092a8f4535312355a007ff8568bd28e325a97f55174ce911ffa49eadfc5.css?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/jquery/jquery-3.1.1.min.self-9347a28e490a684188bc8e7748f6f086a53a87088854ac4de47095f42a085b5b.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/animate/animate.self-570992b3ad6a262de1924aa4ecc17a6f9cf45cb8fd0daaf3cfe5a9f2f3e08e2e.css?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/notifyjs/notify.self-580979233c906abe103d95ccdbfe97994e5a03d69946ab5b2f74dc3a667fde52.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/notifyjs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/style.self-167d1632199aff65e3311f142e72531b5cfe228434ed733029b6037d72860cfd.css?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/metisMenu/jquery.metisMenu.self-587029531d977fc7fa10623dd670189a298bd606124c23fc2edd051da5b0c914.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/pace/pace.min.self-9bf6d667514a59744d5db2c9392aaf5595dec9c131a425ababa1cb8cddb814f2.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/slimscroll/jquery.slimscroll.min.self-a2008e2992d055fbe5108d326a54c3083f843da1a30240d2b2e1f706716fa03e.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/datatables/jquery.dataTables.self-09a1cac04cf9882e653cf3df15b46bed5a3c238a839c9d6040e30a14144af1f5.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/datatables/extensions/Buttons/dataTables.buttons.self-90012c937b1d95a2f530de773518fb74505f64fab21cf33a9083e17612b9d7f4.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.print.self-7aa983e0c236c36a6ed90ee582dee448015dec0ca98dbe8881e9102137fa47ca.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.colVis.self-11afe91df33a12487073f276c98a16ba5d3a38b46803b98d6c38355b6fb745a7.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.html5.self-cd8c1c8e2a50e602e3f7b1c6461f9e580d45e9b3263d8ff6faabf7f621089cc7.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/datatables/extensions/Select/dataTables.select.self-862eade47f647d6c4a51c90184450d132cbed38241e6edcc9b818b36a21a2529.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.flash.self-b4a6e56a9b14d6f48960cfdb4f551a0512311bdee6ff0dbb2d1a8d427efdbf14.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/datatables/dataTables.bootstrap.self-1daa7c39356fe20af3e5d9f9b7396892d0151ce99bd97a22e590e2423965dee0.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/nprogress.self-d24f5ce72cb21aaa85a63e5ccf83aff7839951dc475bde8f4bc239c35f0d47bb.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/datatables.self-f851246b3ae5838a3c37afdd22ea6e4499a54da1d61653eb710e526a440c8bdc.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.bootstrap.self-dee2b8c947331c508b40e4b9a8cb92e0e6e01fbc721397172c468b221fe950ef.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/nprogress-turbolinks.self-73d7454bfd7992e3690d8d20270ede57910e91c4f710672315c01bdcf68a138d.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/datatables_order_plugin.self-2faa82593c9f617a0c36f48e88d14152cabd3b0ff24f0dbf37fcf120865b43ee.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/audiencias.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/inspinia.self-0105b2740ac6f751553fae37cd22fd48eee7a5092c5c29e32b685e736a59e704.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/processos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/reus.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/application.self-cdb0ad458c65589c083cfb45a0d0ad897390667ab103d12f6f09848135ace311.js?body=1" for 127.0.0.1 at 2018-02-22 13:55:07 -0300
+Started GET "/assets/logo_tj-627db004f2ee4a2b7657bd9a0a42a5b1cfe39a0409ffa49f14bb0cd21c81a373.png" for 127.0.0.1 at 2018-02-22 13:55:08 -0300
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 13:55:09 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GdLT2uaFJhnms7T1dKz6XUAA+Ftq7jWORxu6+gGH7W8q53a3rO4DTsqCTfF8J8lklgXegGUrQ5KYivd3ACGOlQ==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GdLT2uaFJhnms7T1dKz6XUAA+Ftq7jWORxu6+gGH7W8q53a3rO4DTsqCTfF8J8lklgXegGUrQ5KYivd3ACGOlQ==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.1ms)
+Completed 200 OK in 226ms (Views: 224.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 13:55:29 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dlVYEkSd1pVVCU9GHxxMlllIIqCLHbSpylrm6b8qA2pFYP1/Dvbzwnk4tkIXl3+vj00Ee4TYwrUVy6tkvoxgkA==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dlVYEkSd1pVVCU9GHxxMlllIIqCLHbSpylrm6b8qA2pFYP1/Dvbzwnk4tkIXl3+vj00Ee4TYwrUVy6tkvoxgkA==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.4ms)
+Completed 200 OK in 237ms (Views: 236.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 14:06:29 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lvf0v3VQRtJI7qGMrVTVseeZI8XcfYKFFhrzXr41VAKyr8b/Eg3XXhB8XZKeE0yBUCK8IVyv5Zawa9AjQwrxWw==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 68ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lvf0v3VQRtJI7qGMrVTVseeZI8XcfYKFFhrzXr41VAKyr8b/Eg3XXhB8XZKeE0yBUCK8IVyv5Zawa9AjQwrxWw==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (115.9ms)
+Completed 200 OK in 964ms (Views: 925.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 14:07:10 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZV7c9OY1MiFI338cc77brBRmbxiB0ZyOZASCOjrGu6P5Bu60gWijrRBNgwJA+UKco93w/AED+53CdaFHx/ke+g==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (850.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900828"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Romulo Augusto de melo Fortaleza,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (29.0ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-22 17:07:13.355605"], ["last_sign_in_at", "2018-02-22 14:49:43.237819"], ["sign_in_count", 12], ["updated_at", "2018-02-22 17:07:13.356479"], ["id", 1]]
+  [1m[35m (188.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3206ms (ActiveRecord: 1067.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 14:07:13 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_topnavbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (14.8ms)
+Completed 200 OK in 414ms (Views: 372.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-02-22 14:07:17 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 57ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 14:07:18 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-22 14:07:18 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.3ms)
+Completed 200 OK in 249ms (Views: 248.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 14:19:35 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-22 14:19:36 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (67.1ms)
+Completed 200 OK in 2150ms (Views: 2090.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 14:19:42 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0osedNB959QP+x43xgt7LxjGC/U+d/SclDSCfYk7tZHhvrsZmhbCgyPK5zPOgEgWzsMtLjGygoBLpc/wiJ3Waw==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0osedNB959QP+x43xgt7LxjGC/U+d/SclDSCfYk7tZHhvrsZmhbCgyPK5zPOgEgWzsMtLjGygoBLpc/wiJ3Waw==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.4ms)
+Completed 200 OK in 225ms (Views: 224.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 14:20:18 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UUVUg53WcW9MktDP2SpYvqaXXtt6kw93fpbn/Gt02uBicPHu171UOGCjKcvRoWuHcJJ4AHVWeWuhB6pxatK5Gg==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UUVUg53WcW9MktDP2SpYvqaXXtt6kw93fpbn/Gt02uBicPHu171UOGCjKcvRoWuHcJJ4AHVWeWuhB6pxatK5Gg==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.7ms)
+Completed 200 OK in 124ms (Views: 122.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 14:20:53 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NMdFJYRKLtDG1pUYAcI5ArM/s2pTBf1sgkq1dQn3o4IH8uBIziELh+rnbBwJSQo7ZTqVsVzAi3Bd2/j4CFHAeA==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900828"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Romulo Augusto de melo Fortaleza,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-22 17:20:54.097409"], ["last_sign_in_at", "2018-02-22 17:07:13.355605"], ["sign_in_count", 13], ["updated_at", "2018-02-22 17:20:54.098245"], ["id", 1]]
+  [1m[35m (454.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 675ms (ActiveRecord: 455.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 14:20:54 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_topnavbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 162ms (Views: 130.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-02-22 14:21:21 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 352ms (ActiveRecord: 1.1ms)
+
+
+  
+I18n::InvalidLocaleData (can not load translations from /home/tj.ce.gov.br/900828/Documentos/projetos/MASP/config/locales/models.pt-BR.yml: expects it to return a hash, but does not):
+  
+i18n (0.9.5) lib/i18n/backend/base.rb:215:in `load_file'
+i18n (0.9.5) lib/i18n/backend/base.rb:15:in `block in load_translations'
+i18n (0.9.5) lib/i18n/backend/base.rb:15:in `each'
+i18n (0.9.5) lib/i18n/backend/base.rb:15:in `load_translations'
+i18n (0.9.5) lib/i18n/backend/simple.rb:63:in `init_translations'
+i18n (0.9.5) lib/i18n/backend/simple.rb:46:in `available_locales'
+i18n (0.9.5) lib/i18n/config.rb:43:in `available_locales'
+i18n (0.9.5) lib/i18n/config.rb:49:in `available_locales_set'
+i18n (0.9.5) lib/i18n.rb:289:in `locale_available?'
+i18n (0.9.5) lib/i18n.rb:295:in `enforce_available_locales!'
+i18n (0.9.5) lib/i18n.rb:163:in `translate'
+devise (4.3.0) app/controllers/devise_controller.rb:185:in `find_message'
+devise (4.3.0) app/controllers/devise_controller.rb:153:in `set_flash_message'
+devise (4.3.0) app/controllers/devise_controller.rb:164:in `set_flash_message!'
+devise (4.3.0) app/controllers/devise/sessions_controller.rb:27:in `destroy'
+actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.1.3) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+rack (2.0.4) lib/rack/handler/webrick.rb:86:in `service'
+/home/tj.ce.gov.br/900828/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/tj.ce.gov.br/900828/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/tj.ce.gov.br/900828/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-02-22 14:21:52 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 147ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 14:21:52 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-22 14:21:52 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (106.5ms)
+Completed 200 OK in 1986ms (Views: 1984.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datatables.self-99d41092a8f4535312355a007ff8568bd28e325a97f55174ce911ffa49eadfc5.css?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/application.self-57a5f2f33d24688136dc6332b520d3b3a2ccbecbbf5034f5c20480f3e4d12d6b.css?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/nprogress-bootstrap.self-7efdbc7e2b02b0837cf1bf51a1a6550500b79d294e29f11c234858ab56485438.css?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/nprogress.self-184d1db22dda064c876937bb5d91fa506c3d56621c3fc8ce219c005f66fb8f2d.css?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/font-awesome.self-2a86d2017f4b74f22943750b3b50b9cb753581bab96cbdaaf2df53f4c04c995b.css?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/nprogress-turbolinks5.self-1759ad2c73d6b6e93cda9150dbcd89e39df501ad601eaba5b547bc0cbf3ed213.css?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/animate/animate.self-570992b3ad6a262de1924aa4ecc17a6f9cf45cb8fd0daaf3cfe5a9f2f3e08e2e.css?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/style.self-167d1632199aff65e3311f142e72531b5cfe228434ed733029b6037d72860cfd.css?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/jquery/jquery-3.1.1.min.self-9347a28e490a684188bc8e7748f6f086a53a87088854ac4de47095f42a085b5b.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/notifyjs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/notifyjs/notify.self-580979233c906abe103d95ccdbfe97994e5a03d69946ab5b2f74dc3a667fde52.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/slimscroll/jquery.slimscroll.min.self-a2008e2992d055fbe5108d326a54c3083f843da1a30240d2b2e1f706716fa03e.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/metisMenu/jquery.metisMenu.self-587029531d977fc7fa10623dd670189a298bd606124c23fc2edd051da5b0c914.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/datatables/jquery.dataTables.self-09a1cac04cf9882e653cf3df15b46bed5a3c238a839c9d6040e30a14144af1f5.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/pace/pace.min.self-9bf6d667514a59744d5db2c9392aaf5595dec9c131a425ababa1cb8cddb814f2.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.print.self-7aa983e0c236c36a6ed90ee582dee448015dec0ca98dbe8881e9102137fa47ca.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/datatables/extensions/Buttons/dataTables.buttons.self-90012c937b1d95a2f530de773518fb74505f64fab21cf33a9083e17612b9d7f4.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.html5.self-cd8c1c8e2a50e602e3f7b1c6461f9e580d45e9b3263d8ff6faabf7f621089cc7.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.colVis.self-11afe91df33a12487073f276c98a16ba5d3a38b46803b98d6c38355b6fb745a7.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/datatables/extensions/Select/dataTables.select.self-862eade47f647d6c4a51c90184450d132cbed38241e6edcc9b818b36a21a2529.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/datatables/dataTables.bootstrap.self-1daa7c39356fe20af3e5d9f9b7396892d0151ce99bd97a22e590e2423965dee0.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.bootstrap.self-dee2b8c947331c508b40e4b9a8cb92e0e6e01fbc721397172c468b221fe950ef.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/datatables.self-f851246b3ae5838a3c37afdd22ea6e4499a54da1d61653eb710e526a440c8bdc.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.flash.self-b4a6e56a9b14d6f48960cfdb4f551a0512311bdee6ff0dbb2d1a8d427efdbf14.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/nprogress.self-d24f5ce72cb21aaa85a63e5ccf83aff7839951dc475bde8f4bc239c35f0d47bb.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/audiencias.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/nprogress-turbolinks.self-73d7454bfd7992e3690d8d20270ede57910e91c4f710672315c01bdcf68a138d.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/datatables_order_plugin.self-2faa82593c9f617a0c36f48e88d14152cabd3b0ff24f0dbf37fcf120865b43ee.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/inspinia.self-0105b2740ac6f751553fae37cd22fd48eee7a5092c5c29e32b685e736a59e704.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/reus.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/application.self-cdb0ad458c65589c083cfb45a0d0ad897390667ab103d12f6f09848135ace311.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/processos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-22 14:21:54 -0300
+Started GET "/assets/logo_tj-627db004f2ee4a2b7657bd9a0a42a5b1cfe39a0409ffa49f14bb0cd21c81a373.png" for 127.0.0.1 at 2018-02-22 14:21:55 -0300
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 14:22:25 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xyRD6ulJxtmqwgqT3Z4xQ+7ZQYEQLE62x+2bOTVGbrnbYYjGOsbXJ4ZRLI/rsVdW7JbB2Vbpzk1uDlvcxhgv/g==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xyRD6ulJxtmqwgqT3Z4xQ+7ZQYEQLE62x+2bOTVGbrnbYYjGOsbXJ4ZRLI/rsVdW7JbB2Vbpzk1uDlvcxhgv/g==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.3ms)
+Completed 200 OK in 103ms (Views: 102.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 14:24:23 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ql0FwGdNlvUFhyf4D7qGZ66E2EezYOWMm/Q5SUZ6/kheGM7stMKHCykUAeQ5leByrMtYH/WlZXcyF/mstSS/Dw==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ql0FwGdNlvUFhyf4D7qGZ66E2EezYOWMm/Q5SUZ6/kheGM7stMKHCykUAeQ5leByrMtYH/WlZXcyF/mstSS/Dw==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.1ms)
+Completed 200 OK in 119ms (Views: 118.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 14:40:16 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 29ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-22 14:40:17 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (64.6ms)
+Completed 200 OK in 514ms (Views: 513.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 14:41:15 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wk2hqzgOeP87OsMLSieCFm89n8Y/s+fYRQGe6FHylkVGCGqH64FpARep5Rd8COQDbXIfnnl2ZyPs4l4NoqzXAg==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (295.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900828"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Romulo Augusto de melo Fortaleza,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (22.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-22 17:41:17.176749"], ["last_sign_in_at", "2018-02-22 17:20:54.097409"], ["sign_in_count", 14], ["updated_at", "2018-02-22 17:41:17.190364"], ["id", 1]]
+  [1m[35m (92.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1817ms (ActiveRecord: 410.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 14:41:17 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_topnavbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (14.3ms)
+Completed 200 OK in 356ms (Views: 324.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 14:51:23 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (62.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (176.6ms)
+  Rendered layouts/_navigation.html.erb (12.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (92.1ms)
+Completed 200 OK in 1690ms (Views: 1348.0ms | ActiveRecord: 62.8ms)
+
+
+Started GET "/assets/application.self-57a5f2f33d24688136dc6332b520d3b3a2ccbecbbf5034f5c20480f3e4d12d6b.css?body=1" for 127.0.0.1 at 2018-02-22 14:51:26 -0300
+Started GET "/assets/font-awesome.self-2a86d2017f4b74f22943750b3b50b9cb753581bab96cbdaaf2df53f4c04c995b.css?body=1" for 127.0.0.1 at 2018-02-22 14:51:26 -0300
+Started GET "/assets/nprogress.self-184d1db22dda064c876937bb5d91fa506c3d56621c3fc8ce219c005f66fb8f2d.css?body=1" for 127.0.0.1 at 2018-02-22 14:51:26 -0300
+Started GET "/assets/animate/animate.self-570992b3ad6a262de1924aa4ecc17a6f9cf45cb8fd0daaf3cfe5a9f2f3e08e2e.css?body=1" for 127.0.0.1 at 2018-02-22 14:51:26 -0300
+Started GET "/assets/nprogress-bootstrap.self-7efdbc7e2b02b0837cf1bf51a1a6550500b79d294e29f11c234858ab56485438.css?body=1" for 127.0.0.1 at 2018-02-22 14:51:26 -0300
+Started GET "/assets/datatables.self-99d41092a8f4535312355a007ff8568bd28e325a97f55174ce911ffa49eadfc5.css?body=1" for 127.0.0.1 at 2018-02-22 14:51:26 -0300
+Started GET "/assets/style.self-167d1632199aff65e3311f142e72531b5cfe228434ed733029b6037d72860cfd.css?body=1" for 127.0.0.1 at 2018-02-22 14:51:26 -0300
+Started GET "/assets/jquery/jquery-3.1.1.min.self-9347a28e490a684188bc8e7748f6f086a53a87088854ac4de47095f42a085b5b.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:26 -0300
+Started GET "/assets/nprogress-turbolinks5.self-1759ad2c73d6b6e93cda9150dbcd89e39df501ad601eaba5b547bc0cbf3ed213.css?body=1" for 127.0.0.1 at 2018-02-22 14:51:26 -0300
+Started GET "/assets/notifyjs/notify.self-580979233c906abe103d95ccdbfe97994e5a03d69946ab5b2f74dc3a667fde52.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:26 -0300
+Started GET "/assets/notifyjs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:26 -0300
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:26 -0300
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/pace/pace.min.self-9bf6d667514a59744d5db2c9392aaf5595dec9c131a425ababa1cb8cddb814f2.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/metisMenu/jquery.metisMenu.self-587029531d977fc7fa10623dd670189a298bd606124c23fc2edd051da5b0c914.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/slimscroll/jquery.slimscroll.min.self-a2008e2992d055fbe5108d326a54c3083f843da1a30240d2b2e1f706716fa03e.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/datatables/extensions/Buttons/dataTables.buttons.self-90012c937b1d95a2f530de773518fb74505f64fab21cf33a9083e17612b9d7f4.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.print.self-7aa983e0c236c36a6ed90ee582dee448015dec0ca98dbe8881e9102137fa47ca.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/datatables/jquery.dataTables.self-09a1cac04cf9882e653cf3df15b46bed5a3c238a839c9d6040e30a14144af1f5.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.html5.self-cd8c1c8e2a50e602e3f7b1c6461f9e580d45e9b3263d8ff6faabf7f621089cc7.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.colVis.self-11afe91df33a12487073f276c98a16ba5d3a38b46803b98d6c38355b6fb745a7.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.flash.self-b4a6e56a9b14d6f48960cfdb4f551a0512311bdee6ff0dbb2d1a8d427efdbf14.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.bootstrap.self-dee2b8c947331c508b40e4b9a8cb92e0e6e01fbc721397172c468b221fe950ef.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/datatables/extensions/Select/dataTables.select.self-862eade47f647d6c4a51c90184450d132cbed38241e6edcc9b818b36a21a2529.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/datatables/dataTables.bootstrap.self-1daa7c39356fe20af3e5d9f9b7396892d0151ce99bd97a22e590e2423965dee0.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/datatables.self-f851246b3ae5838a3c37afdd22ea6e4499a54da1d61653eb710e526a440c8bdc.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/nprogress.self-d24f5ce72cb21aaa85a63e5ccf83aff7839951dc475bde8f4bc239c35f0d47bb.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/nprogress-turbolinks.self-73d7454bfd7992e3690d8d20270ede57910e91c4f710672315c01bdcf68a138d.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/audiencias.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/datatables_order_plugin.self-2faa82593c9f617a0c36f48e88d14152cabd3b0ff24f0dbf37fcf120865b43ee.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/inspinia.self-0105b2740ac6f751553fae37cd22fd48eee7a5092c5c29e32b685e736a59e704.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/reus.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/processos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/application.self-cdb0ad458c65589c083cfb45a0d0ad897390667ab103d12f6f09848135ace311.js?body=1" for 127.0.0.1 at 2018-02-22 14:51:27 -0300
+Started GET "/assets/masp2-aa552033441bc76d0aaffc34a44127ea6f51b45bf6e74f4716660336b92e5fbd.png" for 127.0.0.1 at 2018-02-22 14:51:28 -0300
+Started GET "/assets/masp1-2678427d01465df517028317c7c74dfb84c206b9a990694578557e9755a54184.png" for 127.0.0.1 at 2018-02-22 14:51:28 -0300
+Started GET "/assets/logo_tj-627db004f2ee4a2b7657bd9a0a42a5b1cfe39a0409ffa49f14bb0cd21c81a373.png" for 127.0.0.1 at 2018-02-22 14:51:28 -0300
+Started GET "/assets/patterns/header-profile-c05909898218a521d3bd19ba09a9a43338de6de5fdf1d3fc771b0ec28ae416c5.png" for 127.0.0.1 at 2018-02-22 14:51:28 -0300
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 15:03:04 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cqgol8MjXHprq4PUJZuRD/fWHhnv3xmn7x+gKQeg8HBDBpE52JgT6k6umfCxhdaojWQC4PfVyphmwffwDpO7jw==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (36.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900828"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Romulo Augusto de melo Fortaleza,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (34.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-22 18:03:05.188511"], ["last_sign_in_at", "2018-02-22 17:41:17.176749"], ["sign_in_count", 15], ["updated_at", "2018-02-22 18:03:05.196029"], ["id", 1]]
+  [1m[35m (172.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 626ms (ActiveRecord: 243.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 15:03:05 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (82.5ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (17.2ms)
+Completed 200 OK in 6890ms (Views: 6829.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/style.self-17efca903d93123bbba334682d4485ff4e4b0490a6ab25c9ab42045f9583160d.css?body=1" for 127.0.0.1 at 2018-02-22 15:03:13 -0300
+Started GET "/processos/listaprocessos" for 127.0.0.1 at 2018-02-22 15:03:23 -0300
+Processing by ProcessosController#listaprocessos as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering processos/listaprocessos.html.erb within layouts/application
+  Rendered processos/listaprocessos.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (7.8ms)
+  Rendered layouts/_topnavbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 252ms (Views: 225.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-02-22 15:03:47 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 15:03:47 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-22 15:03:47 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (17.9ms)
+Completed 200 OK in 253ms (Views: 251.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNameAndRoleToAdmin (20180222192958)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "name" varchar[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNameAndRoleToAdmin (20180222192958)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "name" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNameAndRoleToUser (20180222193221)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "role" integer[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180222193221"]]
+  [1m[35m (88.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_username' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_username' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-02-22 16:52:14 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-22 16:52:15 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (181.6ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-22 16:52:19 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (7.3ms)
+Completed 200 OK in 764ms (Views: 762.6ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 4640ms (Views: 4556.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/animate/animate.self-570992b3ad6a262de1924aa4ecc17a6f9cf45cb8fd0daaf3cfe5a9f2f3e08e2e.css?body=1" for 127.0.0.1 at 2018-02-22 16:52:20 -0300
+Started GET "/assets/style.self-17efca903d93123bbba334682d4485ff4e4b0490a6ab25c9ab42045f9583160d.css?body=1" for 127.0.0.1 at 2018-02-22 16:52:20 -0300
+Started GET "/assets/datatables/extensions/Buttons/dataTables.buttons.self-90012c937b1d95a2f530de773518fb74505f64fab21cf33a9083e17612b9d7f4.js?body=1" for 127.0.0.1 at 2018-02-22 16:52:20 -0300
+Started GET "/assets/datatables/jquery.dataTables.self-09a1cac04cf9882e653cf3df15b46bed5a3c238a839c9d6040e30a14144af1f5.js?body=1" for 127.0.0.1 at 2018-02-22 16:52:20 -0300
+Started GET "/assets/jquery/jquery-3.1.1.min.self-9347a28e490a684188bc8e7748f6f086a53a87088854ac4de47095f42a085b5b.js?body=1" for 127.0.0.1 at 2018-02-22 16:52:20 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.html5.self-cd8c1c8e2a50e602e3f7b1c6461f9e580d45e9b3263d8ff6faabf7f621089cc7.js?body=1" for 127.0.0.1 at 2018-02-22 16:52:20 -0300
+Started GET "/assets/datatables/extensions/Buttons/buttons.flash.self-b4a6e56a9b14d6f48960cfdb4f551a0512311bdee6ff0dbb2d1a8d427efdbf14.js?body=1" for 127.0.0.1 at 2018-02-22 16:52:21 -0300
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 16:52:28 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1+T5+oHi89oTbuBzBLUKGNt52Ex73xg2aia8VKQlgDGf/odkkcmx+z28pXIujC2H7siEj6e1CyqlTYmuYTzlWw==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900828"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Romulo Augusto de melo Fortaleza,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (22.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-22 19:52:29.132416"], ["last_sign_in_at", "2018-02-22 18:03:05.188511"], ["sign_in_count", 16], ["updated_at", "2018-02-22 19:52:29.133451"], ["id", 1]]
+  [1m[35m (109.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1095ms (ActiveRecord: 132.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 16:52:29 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation.html.erb (8.8ms)
+  Rendered layouts/_topnavbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 227ms (Views: 193.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2" for 127.0.0.1 at 2018-02-22 16:52:29 -0300
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-02-22 16:54:31 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 43ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 16:54:31 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-22 16:54:31 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.3ms)
+Completed 200 OK in 113ms (Views: 111.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-22 16:54:33 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (8.4ms)
+Completed 200 OK in 254ms (Views: 252.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo_tj_favicon-691eca4ca99d9aaedf2c45fbb9bbb7c5713a66b19a05e37e49e62cc929810d70.png" for 127.0.0.1 at 2018-02-22 16:54:33 -0300
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 16:54:40 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zEY4D/0bvgNeYrqnJ8H+2YFwPn5SARbutZjHMsLZuX3CBZH61W17hYdyk7/LZ5iNfEYLacPrEE8takKDpqp4kg==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900828"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Romulo Augusto de melo Fortaleza,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-22 19:54:40.425989"], ["last_sign_in_at", "2018-02-22 19:52:29.132416"], ["sign_in_count", 17], ["updated_at", "2018-02-22 19:54:40.426580"], ["id", 1]]
+  [1m[35m (110.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 141ms (ActiveRecord: 111.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 16:54:40 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 263ms (Views: 226.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 16:54:43 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navigation.html.erb (6.0ms)
+  Rendered layouts/_topnavbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 250ms (Views: 232.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/processos/listaprocessos" for 127.0.0.1 at 2018-02-22 16:54:44 -0300
+Processing by ProcessosController#listaprocessos as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering processos/listaprocessos.html.erb within layouts/application
+  Rendered processos/listaprocessos.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (6.8ms)
+  Rendered layouts/_topnavbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 266ms (Views: 254.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 16:54:45 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navigation.html.erb (9.9ms)
+  Rendered layouts/_topnavbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 300ms (Views: 249.7ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-02-22 17:02:59 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (378.9ms)
+  Rendered layouts/_navigation.html.erb (8.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (24.5ms)
+Completed 200 OK in 999ms (Views: 916.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/logo_tj_favicon-691eca4ca99d9aaedf2c45fbb9bbb7c5713a66b19a05e37e49e62cc929810d70.png" for 127.0.0.1 at 2018-02-22 17:03:01 -0300
+Started GET "/" for 127.0.0.1 at 2018-02-22 17:03:05 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_navigation.html.erb (7.8ms)
+  Rendered layouts/_topnavbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 316ms (Views: 290.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/logo_tj_favicon-691eca4ca99d9aaedf2c45fbb9bbb7c5713a66b19a05e37e49e62cc929810d70.png" for 127.0.0.1 at 2018-02-22 17:03:05 -0300
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-02-22 17:03:08 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (14.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 166ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 17:03:08 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-22 17:03:08 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (18.3ms)
+Completed 200 OK in 262ms (Views: 260.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 17:03:25 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qYzDUWuWvfOaaMNP/sEKc2F/G72bbVWOiNNM2bLxDN8XRvX7+pi6zv2SK2E0VXQv4kw84XtjdyfqB0Q9xvScwQ==", "user"=>{"username"=>"900826", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900826"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=900826
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900826
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Francisco Klever Araujo Sobrinho,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900826
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param mail has value ["klever.sobrinho@tjce.jus.br"]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900826
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param mail has value ["klever.sobrinho@tjce.jus.br"]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900826
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param mail has value ["klever.sobrinho@tjce.jus.br"]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "klever.sobrinho@tjce.jus.br"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "900826"], ["LIMIT", 1]]
+  [1m[35mSQL (8.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "username") VALUES (?, ?, ?, ?)[0m  [["email", "klever.sobrinho@tjce.jus.br"], ["created_at", "2018-02-22 20:03:25.625616"], ["updated_at", "2018-02-22 20:03:25.625616"], ["username", "900826"]]
+  [1m[35m (151.2ms)[0m  [1m[36mcommit transaction[0m
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=900826
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900826
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Francisco Klever Araujo Sobrinho,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-02-22 20:03:25.805572"], ["last_sign_in_at", "2018-02-22 20:03:25.805572"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-02-22 20:03:25.806233"], ["id", 4]]
+  [1m[35m (79.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 369ms (ActiveRecord: 240.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 17:03:25 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900826
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Francisco Klever Araujo Sobrinho"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_navigation.html.erb (11.1ms)
+  Rendered layouts/_topnavbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 263ms (Views: 247.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-02-22 17:03:32 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 17:03:32 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-22 17:03:32 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (3.8ms)
+Completed 200 OK in 252ms (Views: 251.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-22 17:03:37 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b24JLnEWhhK85WjVMjGqszovixlmhu9l6K6l1seqI4buVGuHl2/seMgRnd1BK5rzkjYId7vhmOIh1vwx1zf0Aw==", "user"=>{"username"=>"900828", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "900828"], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Authorizing user CN=Romulo Augusto de melo Fortaleza,OU=Usuarios,OU=TJCE,DC=tj,DC=ce,DC=gov,DC=br
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-22 20:03:37.499967"], ["last_sign_in_at", "2018-02-22 19:54:40.425989"], ["sign_in_count", 18], ["updated_at", "2018-02-22 20:03:37.500534"], ["id", 1]]
+  [1m[35m (164.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 198ms (ActiveRecord: 165.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 17:03:37 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_navigation.html.erb (11.8ms)
+  Rendered layouts/_topnavbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 302ms (Views: 278.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/reus/listareus" for 127.0.0.1 at 2018-02-22 17:09:43 -0300
+Processing by ReusController#listareus as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (98.7ms)[0m  [1m[34mselect cprm.cprm_dsc_grupo_vara, cprm.cprm_dsc_vara, cprm.cprm_dsc_tipo_processo, cprm.cprm_dsc_processo,
+       cprm.cprm_dsc_situacao_processo, cprm.cprm_nom_pessoa_reu, cprm.cprm_dsc_assunto,
+       case
+         when cprm.cprm_dat_oferecimento_denuncia is not null and cprm.cprm_dat_recebimento_denuncia is null and
+              cprm.cprm_dat_citacao is null and cprm.cprm_dat_defesa_preliminar is null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_oferecimento_denuncia,
+       case
+         when cprm.cprm_dat_recebimento_denuncia is not null and
+              cprm.cprm_dat_citacao is null and cprm.cprm_dat_defesa_preliminar is null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_recebimento_denuncia,
+       case
+         when cprm.cprm_dat_citacao is not null and cprm.cprm_dat_defesa_preliminar is null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_citacao,
+       case
+         when cprm.cprm_dat_defesa_preliminar is not null and
+              cprm.cprm_dat_inicio_instrucao is null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_defesa_preliminar,
+       case
+         when cprm.cprm_dat_inicio_instrucao is not null and cprm.cprm_dat_fim_instrucao is null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_inicio_instrucao,
+       case
+         when cprm.cprm_dat_fim_instrucao is not null and
+              cprm.cprm_dat_memoriais_acusacao is null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_fim_instrucao,
+       case
+         when cprm.cprm_dat_memoriais_acusacao is not null and cprm.cprm_dat_memoriais_defesa is null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_memoriais_acusacao,
+       case
+         when cprm.cprm_dat_memoriais_defesa is not null and
+              cprm.cprm_dat_sentenca is null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_memoriais_defesa,
+       case
+         when cprm.cprm_dat_sentenca is not null and cprm.cprm_dat_transito  is null then 1
+         else 0
+       end qtd_sentenca,
+       case
+         when cprm.cprm_dat_transito is not null then 1
+         else 0
+       end qtd_transito
+from dwfcb.tcprm_ciclo_processo_reu_masp cprm
+where cprm.cprm_num_ciclo = 1
+  and cprm.cprm_cod_vara <> 36 --12ª Vara Criminal
+  and cprm.cprm_dat_inicio_execucao is null
+  and (cprm.cprm_dat_oferecimento_denuncia is not null
+    or cprm.cprm_dat_recebimento_denuncia is not null)
+order by cprm.cprm_dsc_grupo_vara, cprm.cprm_dsc_vara, cprm.cprm_nom_pessoa_reu[0m
+  Rendering reus/listareus.html.erb within layouts/application
+  Rendered reus/listareus.html.erb within layouts/application (22.8ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 919ms (Views: 149.7ms | ActiveRecord: 99.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 127.0.0.1 at 2018-02-22 17:09:45 -0300
+Started GET "/" for 127.0.0.1 at 2018-02-22 17:09:47 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=900828
+  [36mLDAP:[0m LDAP search yielded 1 matches
+  [36mLDAP:[0m Requested param cn has value ["Romulo Augusto de melo Fortaleza"]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation.html.erb (5.9ms)
+  Rendered layouts/_topnavbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 262ms (Views: 243.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/processos/listaprocessos" for 127.0.0.1 at 2018-02-22 17:12:43 -0300
+Processing by ProcessosController#listaprocessos as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering processos/listaprocessos.html.erb within layouts/application
+  Rendered processos/listaprocessos.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (6.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 126ms (Views: 124.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-02-22 17:18:34 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 17:18:34 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-22 17:18:34 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (41.3ms)
+Completed 200 OK in 170ms (Views: 169.1ms | ActiveRecord: 0.0ms)
+
+

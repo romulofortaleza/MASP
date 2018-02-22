@@ -19,6 +19,7 @@ gem 'coffee-rails'
 
 gem 'nprogress-rails'
 
+gem 'pundit'
 gem 'devise'
 gem 'devise-i18n'
 gem "devise_ldap_authenticatable"

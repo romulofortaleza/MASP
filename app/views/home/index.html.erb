@@ -11,7 +11,7 @@
                 </h2>
                 <br>
                 <span>
-
+                    <img alt="image" id="logo" src="<%= image_url 'logo_tj.png' %>"/>
                 </span>
                 </br>
             </div>
@@ -24,3 +24,9 @@
     $.notify("<%= value %>", "success");
 </script>
 <% end %>
+
+  <% if alert %>
+      <script>
+          $.notify("<%= alert %>", "error");
+      </script>
+  <% end %>
