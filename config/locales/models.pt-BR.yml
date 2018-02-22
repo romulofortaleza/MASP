@@ -1,0 +1,12 @@
+pt-BR:
+  activerecord:
+    models:
+      user:
+        username:
+          one: "Usuário"
+          other: "Usuários"
+    attributes:
+      user:
+        username:
+          one: "Usuário"
+          other: "Usuários"
